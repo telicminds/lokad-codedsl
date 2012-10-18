@@ -102,8 +102,16 @@ public partial class {0}",
                     
                 };
 
-  
-            File.WriteAllText(Path.ChangeExtension(fullPath, "cs"), GeneratorUtil.Build(dsl, generator));
+
+            try
+            {
+                File.WriteAllText(Path.ChangeExtension(fullPath, "cs"), GeneratorUtil.Build(dsl, generator));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Parse error: {0}\r\nFile: {1}", ex.Message, fullPath);
+            }
+
         }
     }
 }
