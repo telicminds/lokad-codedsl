@@ -1,29 +1,60 @@
-﻿Simple Definitions  
-------------------
+﻿Lokad Code DSL
+--------------
 
-**Namespaces**
+Lokad Contracts DSL is an optional console utility that you can run in the background. It tracks changes to files with special compact syntax and updates CS file. Changes are immediate upon saving file (and ReSharper immediately picks them). This is an improved version of Lokad Code DSL, it supports identities and can auto-generate interfaces for aggregates and aggregate state classes.
+
+Lokad Code DSL is used by [Lokad.CQRS](http://lokad.github.com/lokad-cqrs/) (was originally part of it) and is explained in greater detail in [BeingTheWorst Podcast](http://beingtheworst.com/) - Episode 12.
+
+You can try this out by starting `Sample` project and then changing `Sample\Contracts.ddd` [view Contracts.ddd source] (http://github.com/Lokad/lokad-dsl/blob/master/Sample/Contracts.ddd). Code DSL tool will be regenerating corresponding contracts file [view Contracts.cs source] (http://github.com/Lokad/lokad-dsl/blob/master/Sample/Contracts.cs).
+
+Current DSL code generates contracts classes that are compatible with DataContracts, ServiceStack.JSON and ProtoBuf.
+
+Syntax Definitions
+-----------------
+### Namespaces
 
 Add namespace for our messages  
+
     namespace NameSpace
 
-CS file
+**Result:**
+
     namespace NameSpace  
     {  
     ...  
     }
 
-Define data contract namespace
+### Data contract namespace
 
     extern "Lokad"
 
-CS file  
+**Result:**
 
     [DataContract(Namespace = "Lokad")]
 
+### Simple Contract definitions
 
-**Shortcuts**  
+    Universe(UniverseId Id, string name)
 
-For use interface in classes, need to create interface shortcut first, definition of interface IIdentity must be contained in C# file 
+**Result:**
+
+    [DataContract(Namespace = "Lokad")]
+    public partial class Universe
+    {
+        [DataMember(Order = 1)] public UniverseId Id { get; private set; }
+        [DataMember(Order = 2)] public string Name { get; private set; }
+
+        Universe () {}
+        public Universe (UniverseId id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+    }
+
+### Interface Shortcuts
+
+In order to use interface in contract classes, need to create interface shortcut first, definition of interface IIdentity must be contained in C# file
     
     if ! = IIdentity
 
@@ -31,7 +62,7 @@ For the next step define simple class with one property
  
     UniverseId!(long id)
 
-Result
+**Result:**
 
     [DataContract(Namespace = "Lokad")]
     public partial class UniverseId : IIdentity
@@ -45,29 +76,36 @@ Result
         }
     }
 
-Method arguments shortcut, now we can use term `dateUtc` instead full definition with argument type and name.
+
+### Method Argument Constants
+
+Method arguments constants allow us to define constant to replace method argument definition. For example, now we can use term `dateUtc` instead full definition with argument type and name.
 
     const dateUtc = DateTime dateUtc
 
+###
+
 Application service & state
 ---------------------------
-Definition of application service must begining with interface key. 
-interface Universe(UniverseId Id)
-{
-    // define shortcut for commands
-    if ? = IUniverseCommand
-    // define shortcut for events
-    if ! = IUniverseEvent<UniverseId>
+Definition of application service must begining with interface key.
 
-    CreateUniverse?(name)
-        // override ToString() for command
-        explicit "Create universe - {name}"
-        UniverseCreated!(name)
-        // override ToString() for event
-        explicit "Universe {name} created"
-}
+    interface Universe(UniverseId Id)
+    {
+        // define shortcut for commands
+        if ? = IUniverseCommand
+        // define shortcut for events
+        if ! = IUniverseEvent<UniverseId>
 
-Result  
+        CreateUniverse?(name)
+            // override ToString() for command
+            explicit "Create universe - {name}"
+            UniverseCreated!(name)
+            // override ToString() for event
+            explicit "Universe {name} created"
+    }
+
+**Result:**
+
     public interface IUniverseApplicationService
     {
         void When(CreateUniverse c);
@@ -79,6 +117,7 @@ Result
     }
 
 Command and corresponding event
+
     [DataContract(Namespace = "Lokad")]
     public partial class CreateUniverse : IUniverseCommand
     {
@@ -117,4 +156,13 @@ Command and corresponding event
         }
     }
 
-(Improved DSL Syntax for DDD and Event Sourcing) (http://abdullin.com/journal/2012/7/25/improved-dsl-syntax-for-ddd-and-event-sourcing.html)
+
+Related articles
+-----------
+[Improved DSL Syntax for DDD and Event Sourcing] (http://abdullin.com/journal/2012/7/25/improved-dsl-syntax-for-ddd-and-event-sourcing.html)
+
+
+Feedback
+--------
+
+Please, feel free to drop feedback in the [Lokad Community](https://groups.google.com/forum/#!forum/lokad).
