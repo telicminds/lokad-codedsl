@@ -1,3 +1,9 @@
+Project moved to [Lokad.Dsl] (http://lokad.github.com/lokad-dsl/)
+-----
+
+
+
+
 Lokad CodeDSL
 =============
 
