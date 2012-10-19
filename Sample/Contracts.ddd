@@ -19,29 +19,29 @@ const dateUtc = DateTime dateUtc
 // Define application service IUniverseApplicationService
 interface Universe(UniverseId Id)
 {
-	// define shortcut for commands
-	if ? = IUniverseCommand
-	// define shortcut for events
-	if ! = IUniverseEvent<UniverseId>
+    // define shortcut for commands
+    if ? = IUniverseCommand
+    // define shortcut for events
+    if ! = IUniverseEvent<UniverseId>
 
-	CreateUniverse?(name)
-		// override ToString() for command
-		explicit "Create universe - {name}"
-		UniverseCreated!(name)
-			// override ToString() for event
-			explicit "Universe {name} created"
+    CreateUniverse?(name)
+        // override ToString() for command
+        explicit "Create universe - {name}"
+        UniverseCreated!(name)
+            // override ToString() for event
+            explicit "Universe {name} created"
 
-	DestroyUniverse?(string reason)
-		explicit "Destroy universe, reason - {reason}"
-		UniverseDestroyed!(string reason)
-			explicit "Universe destroyed, reason - {reason}"
+    DestroyUniverse?(string reason)
+        explicit "Destroy universe, reason - {reason}"
+        UniverseDestroyed!(string reason)
+            explicit "Universe destroyed, reason - {reason}"
 
-	AddGalaxy?(name, GalaxyType type)
-		explicit "Create {type} galaxy - {name}"
-		GalaxyAdded!(GalaxyId galaxyId, name, GalaxyType type, dateUtc)
-			explicit "[{dateUtc:yyyy.MM.dd HH:mm}] Galaxy {name} of type {type} added to universe."
-	WipeGalaxy?(GalaxyId galaxyId, string reason)
-		explicit "Wipe galaxy {galaxyId}, reason - {reason}"
-		GalaxyWiped!(GalaxyId galaxyId, name, string reason, dateUtc)
-			explicit "[{dateUtc:yyyy.MM.dd HH:mm}] Galaxy {name} wiped, reason - {reason}"
+    AddGalaxy?(name, GalaxyType type)
+        explicit "Create {type} galaxy - {name}"
+        GalaxyAdded!(GalaxyId galaxyId, name, GalaxyType type, dateUtc)
+            explicit "[{dateUtc:yyyy.MM.dd HH:mm}] Galaxy {name} of type {type} added to universe."
+    WipeGalaxy?(GalaxyId galaxyId, string reason)
+        explicit "Wipe galaxy {galaxyId}, reason - {reason}"
+        GalaxyWiped!(GalaxyId galaxyId, name, string reason, dateUtc)
+            explicit "[{dateUtc:yyyy.MM.dd HH:mm}] Galaxy {name} wiped, reason - {reason}"
 }
