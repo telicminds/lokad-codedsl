@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Dsl.csproj", "{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lokad.Dsl.Sample", "..\Sample\Lokad.Dsl.Sample.csproj", "{D64144C0-6C6D-4AF4-B5D9-DF288C839ADC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64144C0-6C6D-4AF4-B5D9-DF288C839ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64144C0-6C6D-4AF4-B5D9-DF288C839ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64144C0-6C6D-4AF4-B5D9-DF288C839ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64144C0-6C6D-4AF4-B5D9-DF288C839ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
