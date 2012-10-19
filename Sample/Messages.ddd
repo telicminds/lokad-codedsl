@@ -5,6 +5,7 @@ extern "Lokad"
 
 // define shortcut for interface IIdentity
 if ! = IIdentity
+
 // Simple value object
 UniverseId!(long id)
 GalaxyId!(long id)
