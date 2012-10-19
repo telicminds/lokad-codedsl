@@ -63,12 +63,12 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\ReadMe.md">
+      <Link>ReadMe.md</Link>
+    </None>
     <None Include="App.config" />
     <None Include="MessageContracts.g" />
     <None Include="MessageContracts.tokens" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

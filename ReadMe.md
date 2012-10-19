@@ -157,6 +157,16 @@ Command and corresponding event
     }
 
 
+Editor customization
+------
+
+Sublime Text 2 | Visual Studio 2010 ||
+(../Docs/sublimeText2.PNG) | (../Docs/vs2010_csharp.png) ||
+
+Visual Studio 2010 settings
+(../Docs/vs2010_settings.png)
+
+
 Related articles
 -----------
 [Improved DSL Syntax for DDD and Event Sourcing] (http://abdullin.com/journal/2012/7/25/improved-dsl-syntax-for-ddd-and-event-sourcing.html)
