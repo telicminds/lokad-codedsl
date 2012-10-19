@@ -160,11 +160,24 @@ Command and corresponding event
 Editor customization
 ------
 
-Sublime Text 2 | Visual Studio 2010 ||
-(../Docs/sublimeText2.PNG) | (../Docs/vs2010_csharp.png) ||
+<table>
+<thead>
+<tr>
+<th>Sublime Text 2</th>
+<th>Visual Studio 2010</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/Lokad/lokad-dsl/raw/master/Docs/sublimeText2.PNG" />
+<td><img src="https://github.com/Lokad/lokad-dsl/raw/master/Docs/vs2010_csharp.PNG" />
+</tr>
+</tbody>
+</table>  
 
-Visual Studio 2010 settings
-(../Docs/vs2010_settings.png)
+**Visual Studio 2010 settings**
+
+![Visual Studio settings] (https://github.com/Lokad/lokad-dsl/raw/master/Docs/vs2010_settings.PNG)
 
 
 Related articles
