@@ -10,6 +10,8 @@ if ! = IIdentity
 UniverseId!(long id)
 GalaxyId!(long id)
 
+Universe(UniverseId Id, string name)
+
 // define alias
 const name = string name
 const dateUtc = DateTime dateUtc

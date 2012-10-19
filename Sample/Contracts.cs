@@ -39,6 +39,22 @@ namespace Lokad
         
     
     [DataContract(Namespace = "Lokad")]
+    public partial class Universe
+    {
+        [DataMember(Order = 1)] public UniverseId Id { get; private set; }
+        [DataMember(Order = 2)] public string Name { get; private set; }
+        
+        Universe () {}
+        public Universe (UniverseId id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+    }
+    
+        
+    
+    [DataContract(Namespace = "Lokad")]
     public partial class CreateUniverse : IUniverseCommand
     {
         [DataMember(Order = 1)] public UniverseId Id { get; private set; }

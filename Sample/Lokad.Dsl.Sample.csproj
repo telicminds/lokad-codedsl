@@ -43,11 +43,11 @@
     <Compile Include="GalaxyType.cs" />
     <Compile Include="IIdentity.cs" />
     <Compile Include="Interfaces.cs" />
-    <Compile Include="Messages.cs" />
+    <Compile Include="Contracts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Messages.ddd" />
+    <None Include="Contracts.ddd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMe.txt" />
