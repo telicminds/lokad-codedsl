@@ -1,5 +1,5 @@
 ﻿
-**Lokad Code DSL** ([homepage](http://lokad.github.com/lokad-codedsl/)) is shared with the community by [Lokad](http://www.lokad.com) in hopes that it would benefit the community. 
+**Lokad Code DSL** ([homepage](http://lokad.github.com/lokad-codedsl/)) is shared as open source project by [Lokad](http://www.lokad.com) in hopes that it would benefit the community. 
 
 You can get download binary from [github downloads](https://github.com/Lokad/lokad-codedsl/downloads).
 
