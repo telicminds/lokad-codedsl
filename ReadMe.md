@@ -5,7 +5,7 @@ Lokad Contracts DSL is an optional console utility that you can run in the backg
 
 Lokad Code DSL is used by [Lokad.CQRS](http://lokad.github.com/lokad-cqrs/) (was originally part of it) and is explained in greater detail in [BeingTheWorst Podcast](http://beingtheworst.com/) - Episode 12.
 
-You can try this out by starting `Sample` project and then changing `Sample\Contracts.ddd` [view Contracts.ddd source] (http://github.com/Lokad/lokad-dsl/blob/master/Sample/Contracts.ddd). Code DSL tool will be regenerating corresponding contracts file [view Contracts.cs source] (http://github.com/Lokad/lokad-dsl/blob/master/Sample/Contracts.cs).
+You can try this out by starting `Sample` project and then changing `Sample\Contracts.ddd` [view Contracts.ddd source] (http://github.com/Lokad/lokad-codedsl/blob/master/Sample/Contracts.ddd). Code DSL tool will be regenerating corresponding contracts file [view Contracts.cs source] (http://github.com/Lokad/lokad-codedsl/blob/master/Sample/Contracts.cs).
 
 Current DSL code generates contracts classes that are compatible with DataContracts, ServiceStack.JSON and ProtoBuf.
 
@@ -169,15 +169,15 @@ Editor customization
 </thead>
 <tbody>
 <tr>
-<td><img src="https://github.com/Lokad/lokad-dsl/raw/master/Docs/sublimeText2.PNG" />
-<td><img src="https://github.com/Lokad/lokad-dsl/raw/master/Docs/vs2010_csharp.PNG" />
+<td><img src="https://github.com/Lokad/lokad-codedsl/raw/master/Docs/sublimeText2.PNG" />
+<td><img src="https://github.com/Lokad/lokad-codedsl/raw/master/Docs/vs2010_csharp.PNG" />
 </tr>
 </tbody>
 </table>  
 
 **Visual Studio 2010 settings**
 
-![Visual Studio settings] (https://github.com/Lokad/lokad-dsl/raw/master/Docs/vs2010_settings.PNG)
+![Visual Studio settings] (https://github.com/Lokad/lokad-codedsl/raw/master/Docs/vs2010_settings.PNG)
 
 
 Related articles
