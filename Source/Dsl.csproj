@@ -63,7 +63,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="MessageContracts.g" />
     <None Include="MessageContracts.tokens" />
   </ItemGroup>
