@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lokad-codedsl by Lokad</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Lokad/lokad-codedsl">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Lokad/lokad-codedsl/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Lokad/lokad-codedsl/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Lokad-codedsl</h1>
+          <p>Streamline .NET contract generation with Visual Studio.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Lokad">Lokad</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h2>Lokad Code DSL</h2>
+
+<p>Lokad Contracts DSL is an optional console utility that you can run in the background. It tracks changes to files with special compact syntax and updates CS file. Changes are immediate upon saving file (and ReSharper immediately picks them). This is an improved version of Lokad Code DSL, it supports identities and can auto-generate interfaces for aggregates and aggregate state classes.</p>
+
+<p>Lokad Code DSL is used by <a href="http://lokad.github.com/lokad-cqrs/">Lokad.CQRS</a> (was originally part of it) and is explained in greater detail in <a href="http://beingtheworst.com/">BeingTheWorst Podcast</a> - Episode 12.</p>
+
+<p>You can try this out by starting <code>Sample</code> project and then changing <code>Sample\Contracts.ddd</code> (view <a href="http://github.com/Lokad/lokad-codedsl/blob/master/Sample/Contracts.ddd">Contracts.ddd source</a>). Code DSL tool will be regenerating corresponding contracts file as you change and save (view <a href="http://github.com/Lokad/lokad-codedsl/blob/master/Sample/Contracts.cs">Contracts.cs source</a>).</p>
+
+<p>Current DSL code generates contracts classes that are compatible with DataContracts, ServiceStack.JSON and ProtoBuf.</p>
+
+<h2>Syntax Definitions</h2>
+
+<h3>Namespaces</h3>
+
+<p>Add namespace for our messages  </p>
+
+<pre><code>namespace NameSpace
+</code></pre>
+
+<p><strong>Result:</strong></p>
+
+<pre><code>namespace NameSpace  
+{  
+...  
+}
+</code></pre>
+
+<h3>Data contract namespace</h3>
+
+<pre><code>extern "Lokad"
+</code></pre>
+
+<p><strong>Result:</strong></p>
+
+<pre><code>[DataContract(Namespace = "Lokad")]
+</code></pre>
+
+<h3>Simple Contract definitions</h3>
+
+<pre><code>Universe(UniverseId Id, string name)
+</code></pre>
+
+<p><strong>Result:</strong></p>
+
+<pre><code>[DataContract(Namespace = "Lokad")]
+public partial class Universe
+{
+    [DataMember(Order = 1)] public UniverseId Id { get; private set; }
+    [DataMember(Order = 2)] public string Name { get; private set; }
+
+    Universe () {}
+    public Universe (UniverseId id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
+}
+</code></pre>
+
+<h3>Interface Shortcuts</h3>
+
+<p>In order to use interface in contract classes, need to create interface shortcut first, definition of interface IIdentity must be contained in C# file</p>
+
+<pre><code>if ! = IIdentity
+</code></pre>
+
+<p>For the next step define simple class with one property</p>
+
+<pre><code>UniverseId!(long id)
+</code></pre>
+
+<p><strong>Result:</strong></p>
+
+<pre><code>[DataContract(Namespace = "Lokad")]
+public partial class UniverseId : IIdentity
+{
+    [DataMember(Order = 1)] public long Id { get; private set; }
+
+    UniverseId () {}
+    public UniverseId (long id)
+    {
+        Id = id;
+    }
+}
+</code></pre>
+
+<h3>Method Argument Constants</h3>
+
+<p>Method arguments constants allow us to define constant to replace method argument definition. For example, now we can use term <code>dateUtc</code> instead full definition with argument type and name.</p>
+
+<pre><code>const dateUtc = DateTime dateUtc
+</code></pre>
+
+<h2>Application service &amp; state</h2>
+
+<p>Definition of application service must begining with interface key.</p>
+
+<pre><code>interface Universe(UniverseId Id)
+{
+    // define shortcut for commands
+    if ? = IUniverseCommand
+    // define shortcut for events
+    if ! = IUniverseEvent&lt;UniverseId&gt;
+
+    CreateUniverse?(name)
+        // override ToString() for command
+        explicit "Create universe - {name}"
+        UniverseCreated!(name)
+        // override ToString() for event
+        explicit "Universe {name} created"
+}
+</code></pre>
+
+<p><strong>Result:</strong></p>
+
+<pre><code>public interface IUniverseApplicationService
+{
+    void When(CreateUniverse c);
+}
+
+public interface IUniverseState
+{
+    void When(UniverseCreated e);
+}
+</code></pre>
+
+<p>Command and corresponding event</p>
+
+<pre><code>[DataContract(Namespace = "Lokad")]
+public partial class CreateUniverse : IUniverseCommand
+{
+    [DataMember(Order = 1)] public UniverseId Id { get; private set; }
+    [DataMember(Order = 2)] public string Name { get; private set; }
+
+    CreateUniverse () {}
+    public CreateUniverse (UniverseId id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
+
+    public override string ToString()
+    {
+        return string.Format(@"Create universe - {0}", Name);
+    }
+}
+
+[DataContract(Namespace = "Lokad")]
+public partial class UniverseCreated : IUniverseEvent&lt;UniverseId&gt;
+{
+    [DataMember(Order = 1)] public UniverseId Id { get; private set; }
+    [DataMember(Order = 2)] public string Name { get; private set; }
+
+    UniverseCreated () {}
+    public UniverseCreated (UniverseId id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
+
+    public override string ToString()
+    {
+        return string.Format(@"Universe {0} created", Name);
+    }
+}
+</code></pre>
+
+<h2>Editor customization</h2>
+
+<table>
+<tr>
+<th>Sublime Text 2</th>
+<th>Visual Studio 2010</th>
+</tr>
+<tr>
+<td><img src="https://github.com/Lokad/lokad-codedsl/raw/master/Docs/sublimeText2.PNG"></td>
+<td><img src="https://github.com/Lokad/lokad-codedsl/raw/master/Docs/vs2010_csharp.PNG"></td>
+</tr>
+</table><p><strong>Visual Studio 2010 settings</strong></p>
+
+<p><img src="https://github.com/Lokad/lokad-codedsl/raw/master/Docs/vs2010_settings.PNG" alt="Visual Studio settings"></p>
+
+<h2>Related articles</h2>
+
+<p><a href="http://abdullin.com/journal/2012/7/25/improved-dsl-syntax-for-ddd-and-event-sourcing.html">Improved DSL Syntax for DDD and Event Sourcing</a></p>
+
+<h2>Feedback</h2>
+
+<p>Please, feel free to drop feedback in the <a href="https://groups.google.com/forum/#!forum/lokad">Lokad Community</a>.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
