@@ -15,20 +15,24 @@ namespace Lokad.CodeDsl
 {
     class Program
     {
-        static ConcurrentDictionary<string, string> _states = new ConcurrentDictionary<string, string>();
+        static readonly ConcurrentDictionary<string, string> _states = new ConcurrentDictionary<string, string>();
 
         static void Main(string[] args)
         {
-            var info = new DirectoryInfo("..\\..\\..\\..");
-
+            var info = GuessDirectory(args);
+            Console.WriteLine("Watching *.ddd files in {0}.", info.FullName);
+            
             var files = info.GetFiles("*.ddd", SearchOption.AllDirectories);
 
             foreach (var fileInfo in files)
             {
+                Console.WriteLine("  Found: {0}", fileInfo.Name);
                 var text = File.ReadAllText(fileInfo.FullName);
                 Changed(fileInfo.FullName, text);
                 Rebuild(text, fileInfo.FullName);
             }
+
+            Console.WriteLine("Files checked. We'll watch changes to these files till you press <Enter>");
 
             var notifiers = files
                 .Select(f => f.DirectoryName)
@@ -44,6 +48,36 @@ namespace Lokad.CodeDsl
 
 
             Console.ReadLine();
+        }
+
+        static string TrimEndFolder(string path, params string[] folders)
+        {
+            foreach (var folder in folders)
+            {
+                if (string.IsNullOrWhiteSpace(path))
+                    return "";
+                var dir = new DirectoryInfo(path);
+                if ((dir.Name).Equals(folder, StringComparison.InvariantCultureIgnoreCase) && dir.Parent != null)
+                {
+                    path = dir.Parent.FullName;
+                }
+            }
+            return path;
+        }
+
+        static DirectoryInfo GuessDirectory(string[] args)
+        {
+            var provided = string.Join(" ", args);
+            if (!string.IsNullOrWhiteSpace(provided))
+                return new DirectoryInfo(provided);
+            Console.WriteLine("No lookup path provided on start, guessing...");
+            var path = Directory.GetCurrentDirectory();
+
+            path = TrimEndFolder(path, "debug", "release", "bin");
+
+            if (!string.IsNullOrWhiteSpace(path))
+                return new DirectoryInfo(path);
+            return new DirectoryInfo(Directory.GetCurrentDirectory());
         }
 
         static void NotifierOnChanged(object sender, FileSystemEventArgs args)
@@ -88,7 +122,7 @@ namespace Lokad.CodeDsl
         static void Rebuild(string text, string fullPath)
         {
             var dsl = text;
-            var generator = new TemplatedGenerator()
+            var generator = new TemplatedGenerator
                 {
                     GenerateInterfaceForEntityWithModifiers = "?",
                     TemplateForInterfaceName = "public interface I{0}Aggregate",

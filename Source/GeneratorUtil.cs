@@ -1,4 +1,5 @@
-﻿using System.CodeDom.Compiler;
+﻿using System;
+using System.CodeDom.Compiler;
 using System.IO;
 using System.Text;
 
@@ -13,7 +14,8 @@ namespace Lokad.CodeDsl
             using (var stream = new StringWriter(builder))
             using (var writer = new IndentedTextWriter(stream, "    "))
             {
-                generator.Generate(GenerateContext(source), writer);
+                var context = GenerateContext(source);
+                generator.Generate(context, writer);
             }
             return builder.ToString();
         }
