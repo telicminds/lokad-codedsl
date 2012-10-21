@@ -1,7 +1,10 @@
-﻿Lokad Code DSL
---------------
+﻿
+**Lokad Code DSL** ([project homepage](http://lokad.github.com/lokad-codedsl/) is shared with the community by [Lokad](http://www.lokad.com) in hopes that it would benefit the community. 
 
-This Code DSL ([project homepage](http://lokad.github.com/lokad-codedsl/) is shared with the community by [Lokad](http://www.lokad.com) in hopes that it would benefit the community. 
+You can get download binary from [github downloads](https://github.com/Lokad/lokad-codedsl/downloads).
+
+About
+-----
 
 
 Lokad Contracts DSL is an optional console utility that you can run in the background. It tracks changes to files with special compact syntax and updates CS file. Changes are immediate upon saving file (and ReSharper immediately picks them). This is an improved version of Lokad Code DSL, it supports identities and can auto-generate interfaces for aggregates and aggregate state classes.
