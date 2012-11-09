@@ -24,8 +24,8 @@ namespace Lokad.CodeDsl
 
                 if (!context.Fragments.ContainsKey(fragmentId))
                 {
-                    var errorNode = (Antlr.Runtime.Tree.CommonErrorNode)tree;
-                    throw new InvalidOperationException(string.Format("Unknown fragment: {0}", fragmentId));
+                    var errorNode = (CommonTree)tree;
+                    throw new InvalidOperationException(string.Format("Line: {0}\r\nUnknown fragment: {1}", errorNode.Line, errorNode.Text));
                 }
 
                 var fragment = context.Fragments[fragmentId];
@@ -60,7 +60,7 @@ namespace Lokad.CodeDsl
             }
 
             var node = (Antlr.Runtime.Tree.CommonErrorNode) tree;
-            throw new InvalidOperationException(string.Format("Unknown fragment: {0}\r\nLine: {1}", node.Text, node.start.Line));
+            throw new InvalidOperationException(string.Format("Line: {0}\r\nUnknown fragment: {1}", node.start.Line, node.Text));
         }
 
         public void WalkDeclarations(ITree tree, Context context)
@@ -169,8 +169,8 @@ namespace Lokad.CodeDsl
                     context.Using.Add(us);
                     break;
                 default:
-                    var node = (Antlr.Runtime.Tree.CommonErrorNode) t;
-                    throw new InvalidOperationException(string.Format("Unexpected token: {0}\r\nLine: {1}", node.Text, node.start.Line));
+                    var node = (CommonErrorNode) t;
+                    throw new InvalidOperationException(string.Format("Line: {0}\r\nUnexpected token: {1}", node.start.Line, node.Text));
             }
         }
 
