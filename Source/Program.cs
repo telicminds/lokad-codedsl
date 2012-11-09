@@ -7,32 +7,48 @@
 
 using System;
 using System.Collections.Concurrent;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Windows.Forms;
 
 namespace Lokad.CodeDsl
 {
     class Program
     {
-        static readonly ConcurrentDictionary<string, string> _states = new ConcurrentDictionary<string, string>();
+        static readonly ConcurrentDictionary<string, string> States = new ConcurrentDictionary<string, string>();
+        public static NotifyIcon TrayIcon;
 
         static void Main(string[] args)
         {
-            var info = GuessDirectory(args);
-            Console.WriteLine("Watching *.ddd files in {0}.", info.FullName);
-            
+            TrayIcon = new NotifyIcon
+            {
+                Icon = new Icon("code_colored.ico"),
+                Visible = true
+            };
+
+            TrayIcon.Click += TrayIconClick;
+
+            var path = FigureOutLookupPath(args);
+            var info = new DirectoryInfo(path);
+            Console.WriteLine("Using lookup path: {0}", info.FullName);
+
             var files = info.GetFiles("*.ddd", SearchOption.AllDirectories);
 
             foreach (var fileInfo in files)
             {
-                Console.WriteLine("  Found: {0}", fileInfo.Name);
                 var text = File.ReadAllText(fileInfo.FullName);
                 Changed(fileInfo.FullName, text);
-                Rebuild(text, fileInfo.FullName);
+                try
+                {
+                    Rebuild(text, fileInfo.FullName);
+                }
+                catch (Exception ex)
+                {
+                    TrayIcon.ShowBalloonTip(10000, "Parse error - " + fileInfo.Name, ex.Message, ToolTipIcon.Error);
+                }
             }
-
-            Console.WriteLine("Files checked. We'll watch changes to these files till you press <Enter>");
 
             var notifiers = files
                 .Select(f => f.DirectoryName)
@@ -46,38 +62,51 @@ namespace Lokad.CodeDsl
                 notifier.EnableRaisingEvents = true;
             }
 
-
-            Console.ReadLine();
+            AppDomain.CurrentDomain.ProcessExit += CurrentDomainProcessExit;
+            Application.ThreadExit += ApplicationThreadExit;
+            Application.Run(new Empty());
         }
 
-        static string TrimEndFolder(string path, params string[] folders)
+        static void ApplicationThreadExit(object sender, EventArgs e)
         {
-            foreach (var folder in folders)
+            Close();
+        }
+
+        static void CurrentDomainProcessExit(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        static void TrayIconClick(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
+        }
+
+        private static void Close()
+        {
+            if (TrayIcon != null)
             {
-                if (string.IsNullOrWhiteSpace(path))
-                    return "";
-                var dir = new DirectoryInfo(path);
-                if ((dir.Name).Equals(folder, StringComparison.InvariantCultureIgnoreCase) && dir.Parent != null)
-                {
-                    path = dir.Parent.FullName;
-                }
+                TrayIcon.Dispose();
             }
-            return path;
         }
 
-        static DirectoryInfo GuessDirectory(string[] args)
+        static string FigureOutLookupPath(string[] args)
         {
-            var provided = string.Join(" ", args);
-            if (!string.IsNullOrWhiteSpace(provided))
-                return new DirectoryInfo(provided);
-            Console.WriteLine("No lookup path provided on start, guessing...");
-            var path = Directory.GetCurrentDirectory();
+            var current = Directory.GetCurrentDirectory();
 
-            path = TrimEndFolder(path, "debug", "release", "bin");
-
-            if (!string.IsNullOrWhiteSpace(path))
-                return new DirectoryInfo(path);
-            return new DirectoryInfo(Directory.GetCurrentDirectory());
+            if (args.Length > 0)
+            {
+                return args[0];
+            }
+            var dir = new DirectoryInfo(current);
+            switch (dir.Name)
+            {
+                case "Release":
+                case "Debug":
+                    return "../../..";
+            }
+            return dir.FullName;
         }
 
         static void NotifierOnChanged(object sender, FileSystemEventArgs args)
@@ -92,14 +121,19 @@ namespace Lokad.CodeDsl
                     return;
 
 
-                Console.WriteLine("{1}-{0}", args.Name, args.ChangeType);
+                var message = string.Format("File {1}-{0}", args.Name, args.ChangeType);
+                Console.WriteLine(message);
                 Rebuild(text, args.FullPath);
+
+                TrayIcon.ShowBalloonTip(3000, args.Name, "File rebuilded", ToolTipIcon.Info);
                 SystemSounds.Beep.Play();
             }
             catch (IOException) {}
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                TrayIcon.ShowBalloonTip(10000, "Error", ex.Message, ToolTipIcon.Error);
+
                 SystemSounds.Exclamation.Play();
             }
         }
@@ -107,7 +141,7 @@ namespace Lokad.CodeDsl
         static bool Changed(string path, string value)
         {
             var changed = false;
-            _states.AddOrUpdate(path, key =>
+            States.AddOrUpdate(path, key =>
                 {
                     changed = true;
                     return value;
@@ -136,16 +170,7 @@ public partial class {0}",
                     
                 };
 
-
-            try
-            {
-                File.WriteAllText(Path.ChangeExtension(fullPath, "cs"), GeneratorUtil.Build(dsl, generator));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Parse error: {0}\r\nFile: {1}", ex.Message, fullPath);
-            }
-
+            File.WriteAllText(Path.ChangeExtension(fullPath, "cs"), GeneratorUtil.Build(dsl, generator));
         }
     }
 }
