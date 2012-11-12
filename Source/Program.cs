@@ -34,7 +34,7 @@ namespace Lokad.CodeDsl
             var iconStream = Assembly.GetEntryAssembly().GetManifestResourceStream("Lokad.CodeDsl.code_colored.ico");
             TrayIcon = new NotifyIcon
             {
-                Visible = true
+                Visible = true,
             };
 
             if (iconStream != null)
@@ -44,7 +44,8 @@ namespace Lokad.CodeDsl
 
             var path = FigureOutLookupPath(args);
             var info = new DirectoryInfo(path);
-            TrayIcon.ShowBalloonTip(5000, "Dsl started", string.Format("Using lookup path: {0}", info.FullName), ToolTipIcon.Info);
+            var tipText = string.Format("Using lookup path: {0}\r\nClick icon to exit.", info.FullName);
+            TrayIcon.ShowBalloonTip(5000, "Dsl started", tipText, ToolTipIcon.Info);
 
             var files = info.GetFiles("*.ddd", SearchOption.AllDirectories);
 
