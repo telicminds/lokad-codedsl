@@ -80,9 +80,7 @@
     <None Include="MessageContracts.tokens" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="code_colored.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="code_colored.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

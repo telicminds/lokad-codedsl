@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Lokad.CodeDsl
@@ -22,11 +23,14 @@ namespace Lokad.CodeDsl
 
         static void Main(string[] args)
         {
+            var iconStream = Assembly.GetEntryAssembly().GetManifestResourceStream("Lokad.CodeDsl.code_colored.ico");
             TrayIcon = new NotifyIcon
             {
-                Icon = new Icon("code_colored.ico"),
                 Visible = true
             };
+
+            if (iconStream != null)
+                TrayIcon.Icon = new Icon(iconStream);
 
             TrayIcon.Click += TrayIconClick;
 
