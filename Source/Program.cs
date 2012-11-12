@@ -12,17 +12,25 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Lokad.CodeDsl
 {
     class Program
     {
+        static readonly Mutex AppLock = new Mutex(true, "2DB34E68-F80D-4ED0-975A-409C2CDAF241");
+
         static readonly ConcurrentDictionary<string, string> States = new ConcurrentDictionary<string, string>();
         public static NotifyIcon TrayIcon;
 
         static void Main(string[] args)
         {
+            if (!AppLock.WaitOne(TimeSpan.Zero, true))
+            {
+                return;
+            }
+
             var iconStream = Assembly.GetEntryAssembly().GetManifestResourceStream("Lokad.CodeDsl.code_colored.ico");
             TrayIcon = new NotifyIcon
             {
@@ -36,7 +44,7 @@ namespace Lokad.CodeDsl
 
             var path = FigureOutLookupPath(args);
             var info = new DirectoryInfo(path);
-            Console.WriteLine("Using lookup path: {0}", info.FullName);
+            TrayIcon.ShowBalloonTip(5000, "Dsl started", string.Format("Using lookup path: {0}", info.FullName), ToolTipIcon.Info);
 
             var files = info.GetFiles("*.ddd", SearchOption.AllDirectories);
 
