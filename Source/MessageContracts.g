@@ -23,6 +23,7 @@ tokens
 	NamespaceToken;
 	ExternToken;
 	UsingToken;
+	DescribeRepresentationToken;
 }
 
 @lexer::namespace { MessageContracts }
@@ -78,7 +79,8 @@ block
     ;    
     
 representation
-	:	EXPLICIT STRING -> ^(StringRepresentationToken STRING);
+	:	EXPLICIT STRING -> ^(StringRepresentationToken STRING)
+	|   EXPLICIT ID '.' ID ('.' ID)* '(this)' -> ^(DescribeRepresentationToken ID*);
 	
 extern_declaration
     :   EXTERN STRING ';' -> ^(ExternToken STRING);
@@ -100,7 +102,6 @@ EXTERN
     :	'extern';
     
 ID  :	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'<'|'>'|'['|']')* ;
-
 
 Modifier
 	: '?'
