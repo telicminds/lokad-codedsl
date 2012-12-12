@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace Lokad.CodeDsl
         static string _lastTitle;
         static string _lastMessage;
         static ToolTipIcon _lastIcon;
+        private static IEnumerable<FileSystemWatcher> _notifiers;
 
         static void Main(string[] args)
         {
@@ -48,31 +50,40 @@ namespace Lokad.CodeDsl
             TrayIcon.ContextMenu = new ContextMenu(
                 new[] { new MenuItem("Close", (sender, eventArgs) => Close())});
 
-            var path = FigureOutLookupPath(args);
-            var info = new DirectoryInfo(path);
-            TrayIcon.ShowBalloonTip(5000, "Dsl started", tipText, ToolTipIcon.Info);
-            
-            var files = info.GetFiles(FileNamePattern, SearchOption.AllDirectories);
+            var lookupPaths = FigureOutLookupPath(args);
 
-            var notifiers = files
-                .Select(f => f.DirectoryName)
-                .Distinct()
-                .Select(d => new FileSystemWatcher(d, FileNamePattern))
-                .ToArray();
+            _notifiers = GetDirectoryWatchers(lookupPaths);
 
-            foreach (var notifier in notifiers)
+            foreach (var notifier in _notifiers)
             {
                 notifier.Changed += NotifierOnChanged;
                 notifier.EnableRaisingEvents = true;
             }
 
+            StartupRebuild(lookupPaths);
+
+            AppDomain.CurrentDomain.ProcessExit += CurrentDomainProcessExit;
+            Application.ThreadExit += ApplicationThreadExit;
+            Application.Run(new Empty());
+        }
+
+        private static void StartupRebuild(string [] lookupPAth)
+        {
+            var files = new List<FileInfo>();
+
+            foreach (var path in lookupPAth)
+            {
+                var info = new DirectoryInfo(path);
+                files.AddRange(info.GetFiles(FileNamePattern, SearchOption.AllDirectories));
+            }
+
             var message = string.Format(
-                "Lookup path: {0}{1}", 
-                info.FullName, Environment.NewLine);
+                "Lookup path: {1}{0}{1}{1}",
+                string.Join("\r\n", lookupPAth), Environment.NewLine);
 
             if (files.Any())
             {
-                message += String.Join("\r\n", files.Select(x => x.Name));
+                message += "Files: \r\n" + String.Join("\r\n", files.Select(x => x.Name));
             }
             else
             {
@@ -80,7 +91,6 @@ namespace Lokad.CodeDsl
             }
 
             message += "\r\n\r\nClick icon to see last message.";
-
 
             ShowBalloonTip("Dsl started", message, ToolTipIcon.Info);
 
@@ -98,10 +108,15 @@ namespace Lokad.CodeDsl
                     ShowBalloonTip("Parse error - " + fileInfo.Name, ex.Message, ToolTipIcon.Error);
                 }
             }
+        }
 
-            AppDomain.CurrentDomain.ProcessExit += CurrentDomainProcessExit;
-            Application.ThreadExit += ApplicationThreadExit;
-            Application.Run(new Empty());
+        private static IEnumerable<FileSystemWatcher> GetDirectoryWatchers(IEnumerable<string> lookupPaths)
+        {
+            return lookupPaths
+                .Where(Directory.Exists)
+                .Distinct()
+                .Select(d => new FileSystemWatcher(d, FileNamePattern) { IncludeSubdirectories = true})
+                .ToArray();
         }
 
         private static void ShowBalloonTip(string title, string message, ToolTipIcon toolTipIcon)
@@ -138,22 +153,23 @@ namespace Lokad.CodeDsl
             Application.Exit();
         }
 
-        static string FigureOutLookupPath(string[] args)
+        static string [] FigureOutLookupPath(string[] args)
         {
-            var current = Directory.GetCurrentDirectory();
-
             if (args.Length > 0)
             {
-                return args[0];
+                return args;
             }
+
+            var current = Directory.GetCurrentDirectory();
             var dir = new DirectoryInfo(current);
             switch (dir.Name)
             {
                 case "Release":
                 case "Debug":
-                    return "../../..";
+                    return new[] {"../../.."};
+                default:
+                    return new[] { dir.FullName };
             }
-            return dir.FullName;
         }
 
         static void NotifierOnChanged(object sender, FileSystemEventArgs args)
@@ -211,7 +227,6 @@ namespace Lokad.CodeDsl
                     ClassNameTemplate = @"[DataContract(Namespace = {1})]
 public partial class {0}",
                     MemberTemplate = "[DataMember(Order = {0})] public {1} {2} {{ get; private set; }}",
-                    
                 };
 
   
