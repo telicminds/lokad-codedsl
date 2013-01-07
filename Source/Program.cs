@@ -188,7 +188,7 @@ namespace Lokad.CodeDsl
                 Console.WriteLine(message);
                 Rebuild(text, args.FullPath);
 
-                ShowBalloonTip(args.Name, "File rebuilded", ToolTipIcon.Info);
+                ShowBalloonTip(args.Name, "File rebuild complete", ToolTipIcon.Info);
                 SystemSounds.Beep.Play();
             }
             catch (IOException) {}
