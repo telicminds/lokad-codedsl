@@ -75,7 +75,15 @@ public sealed class {0}";
 
                 if (contract.Modifiers.Any())
                 {
-                    writer.Write(" : {0}", string.Join(", ", contract.Modifiers.Select(s => s.Interface).ToArray()));
+                    if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") !=
+                        null)
+                    {
+                        writer.Write(" : DomainEvent, {0}", string.Join(", ", contract.Modifiers.Select(s => s.Interface).ToArray()));
+                    }
+                    else
+                    {
+                        writer.Write(" : {0}", string.Join(", ", contract.Modifiers.Select(s => s.Interface).ToArray()));
+                    }
                 }
                 writer.WriteLine();
 
@@ -88,10 +96,23 @@ public sealed class {0}";
 
                     writer.WriteLine();
                     WritePrivateCtor(writer, contract);
-
-                    writer.Write("public {0} (", contract.Name);
+                    if(contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") != null)
+                    {
+                        writer.Write("public {0} (TenancyId tenancyId, int aggregateVersion, ", contract.Name);
+                    }
+                    else
+                    {
+                        writer.Write("public {0} (", contract.Name);
+                    }
                     WriteParameters(contract, writer);
-                    writer.WriteLine(")");
+                    if(contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") != null)
+                    {
+                        writer.WriteLine(") : base(tenancyId, id, aggregateVersion)");
+                    }
+                    else
+                    {
+                        writer.WriteLine(")");
+                    }
                     writer.WriteLine("{");
 
                     writer.Indent += 1;
@@ -110,8 +131,8 @@ public sealed class {0}";
                 if ((entity.Name ?? "default") == "default")
                     continue;
 
-                GenerateEntityInterface(entity, writer, "?", "public interface I{0}ApplicationService");
-                GenerateEntityInterface(entity, writer, "!", "public interface I{0}State");
+                GenerateEntityInterface(entity, writer, "?", "public interface I{0}Aggregate");
+                GenerateEntityInterface(entity, writer, "!", "public interface I{0}AggregateState");
             }
         }
 
@@ -120,7 +141,7 @@ public sealed class {0}";
             var arrays = contract.Members.Where(p => p.Type.EndsWith("[]")).ToArray();
             if (!arrays.Any())
             {
-                writer.WriteLine(@"{0} () {{}}", contract.Name);
+                writer.WriteLine(@"public {0} () {{}}", contract.Name);
             }
             else
             {
@@ -218,7 +239,15 @@ public sealed class {0}";
                 writer.Indent += 1;
                 foreach (var contract in matches)
                 {
-                    writer.WriteLine("void When({0} {1});", contract.Name, member == "!" ? "e" : "c");
+                    if (member == "!")
+                    {
+                        writer.WriteLine("void Apply({0} {1});", contract.Name, "e");
+                    
+                    }
+                    else
+                    {
+                        writer.WriteLine("void When({0} {1});", contract.Name, "c");   
+                    }
                 }
                 writer.Indent -= 1;
                 writer.WriteLine("}");

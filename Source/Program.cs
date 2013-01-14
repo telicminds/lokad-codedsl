@@ -226,7 +226,7 @@ namespace Lokad.CodeDsl
                     TemplateForInterfaceMember = "void When({0} c);",
                     ClassNameTemplate = @"[DataContract(Namespace = {1})]
 public partial class {0}",
-                    MemberTemplate = "[DataMember(Order = {0})] public {1} {2} {{ get; private set; }}",
+                    MemberTemplate = "[DataMember(Order = {0})] public {1} {2} {{ get; set; }}",
                 };
 
   
