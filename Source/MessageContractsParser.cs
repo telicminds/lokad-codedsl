@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 MessageContracts.g 2013-01-31 15:33:50
+// $ANTLR 3.4.1.9004 MessageContracts.g 2013-01-31 16:33:27
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
