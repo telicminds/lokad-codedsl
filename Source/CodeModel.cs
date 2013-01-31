@@ -74,12 +74,15 @@ namespace Lokad.CodeDsl
 
     public sealed class Member
     {
+        public readonly string Annotation;
         public readonly string Name;
         public readonly string Type;
         public readonly Kinds Kind;
         public readonly string DslName;
-        public Member(string type, string name, string dslName, Kinds kind = Kinds.Field)
+
+        public Member(string annotation, string type, string name, string dslName, Kinds kind = Kinds.Field)
         {
+            Annotation = annotation;
             Name = name;
             Type = type;
             Kind = kind;

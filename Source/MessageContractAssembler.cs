@@ -29,13 +29,27 @@ namespace Lokad.CodeDsl
                 }
 
                 var fragment = context.Fragments[fragmentId];
-                yield return new Member(fragment.Type, fragment.Name, fragmentId);
+                yield return new Member(null, fragment.Type, fragment.Name, fragmentId);
                 yield break;
             }
-            if (tree.Type == MessageContractsLexer.MemberToken)
+            if (tree.Type == MessageContractsLexer.MemberToken ||
+                tree.Type == MessageContractsLexer.MemberAnnToken)
             {
-                var type = tree.GetChild(0).Text;
-                var name = tree.GetChild(1).Text;
+                string type;
+                string name;
+                string annotation;
+                if (tree.Type == MessageContractsLexer.MemberToken)
+                {
+                    type = tree.GetChild(0).Text;
+                    name = tree.GetChild(1).Text;
+                    annotation = string.Empty;
+                }
+                else
+                {
+                    annotation = tree.GetChild(0).Text;
+                    type = tree.GetChild(1).Text;
+                    name = tree.GetChild(2).Text;
+                }
                 if (type == "ref")
                 {
                     var match = context.Contracts.Where(c => c.Name == name).ToArray();
@@ -49,16 +63,26 @@ namespace Lokad.CodeDsl
                     }
                     throw new InvalidOperationException(string.Format("Unknown include '{0}'", name));
                 }
-                yield return (new Member(type, name, name));
+                yield return (new Member(annotation, type, name, name));
                 yield break;
             }
             if (tree.Type == MessageContractsLexer.StringRepresentationToken)
             {
                 var text = tree.GetChild(0).Text;
-                yield return new Member(null, text, null, Member.Kinds.StringRepresentation);
+                yield return new Member(null, null, text, null, Member.Kinds.StringRepresentation);
                 yield break;
             }
 
+            if (tree.Type == MessageContractsLexer.MemberAnnToken)
+            {
+
+                //var text = tree.GetChild(0).Text;
+
+                //yield return new Member(null, text, null, Member.Kinds.StringRepresentation);
+
+                yield break;
+
+            }
             var node = (Antlr.Runtime.Tree.CommonErrorNode) tree;
             throw new InvalidOperationException(string.Format("Line: {0}\r\nUnknown fragment: {1}", node.start.Line, node.Text));
         }

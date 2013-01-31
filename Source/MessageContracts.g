@@ -12,6 +12,7 @@ tokens
 	CommandToken;
 	EventToken;	
 	MemberToken;
+	MemberAnnToken;
 	BlockToken;
 	DisctionaryToken;
 	FragmentGroup;
@@ -23,6 +24,7 @@ tokens
 	NamespaceToken;
 	ExternToken;
 	UsingToken;
+	AnnotationToken;
 }
 
 @lexer::namespace { MessageContracts }
@@ -65,8 +67,9 @@ type_declaration
 	: ID Modifier? block -> ^(TypeToken ID block Modifier?);
 	
 member 	
-	:	ID ID -> ^(MemberToken ID ID)
-	|	ID -> ^(FragmentReference ID)
+	:	ANNOTATION ID ID -> ^(MemberAnnToken ANNOTATION ID ID)	
+	|	ID ID -> ^(MemberToken ID ID)
+	|	ID -> ^(FragmentReference ID) 	
 	;
 
 	
@@ -150,3 +153,7 @@ WS  :   ( ' '
         | '\n'
         ) {$channel=HIDDEN;}
     ;  
+
+ANNOTATION
+    :	'[' ('a'..'z'|'A'..'Z'|'_'|','|' ')('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'<'|'>'|','|' ')* ']'
+	;

@@ -269,9 +269,12 @@ public sealed class {0}";
             var idx = 1;
             foreach (var member in message.Members)
             {
-                writer.WriteLine(MemberTemplate, idx, member.Type, GeneratorUtil.MemberCase(member.Name));
+                var annotation = string.IsNullOrWhiteSpace(member.Annotation) 
+                    ? string.Empty 
+                    : string.Format("{0}{1}", Environment.NewLine, member.Annotation);
 
-
+                writer.WriteLine(MemberTemplate, idx, annotation, member.Type, GeneratorUtil.MemberCase(member.Name));
+                
                 idx += 1;
             }
         }
