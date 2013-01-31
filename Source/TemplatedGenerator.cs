@@ -270,10 +270,10 @@ public sealed class {0}";
             foreach (var member in message.Members)
             {
                 var annotation = string.IsNullOrWhiteSpace(member.Annotation) 
-                    ? string.Empty 
-                    : string.Format("{0}{1}", Environment.NewLine, member.Annotation);
+                    ? string.Empty
+                    : string.Format("{0}{1}", member.Annotation, Environment.NewLine);
 
-                writer.WriteLine(MemberTemplate, idx, annotation, member.Type, GeneratorUtil.MemberCase(member.Name));
+                writer.WriteLine(MemberTemplate, annotation, idx, member.Type, GeneratorUtil.MemberCase(member.Name));
                 
                 idx += 1;
             }
