@@ -71,8 +71,16 @@ public sealed class {0}";
         {
             foreach (var contract in context.Contracts)
             {
-                writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern);
-
+//                if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "?") != null)
+//                {
+//                    writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern, string.Format(@"
+//[Validator(typeof({0}Validator))]", contract.Name));
+//                }
+//                else
+//                {
+                    writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern, string.Empty);
+                //}
+                
                 if (contract.Modifiers.Any())
                 {
                     if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") !=

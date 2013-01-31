@@ -31,6 +31,7 @@ namespace Lokad.CodeDsl
                 {
                     "System","System.Collections.Generic",
                     "System.Runtime.Serialization"
+                    //"FluentValidation.Attributes"
                 };
 
             var entity = new Entity("default");
