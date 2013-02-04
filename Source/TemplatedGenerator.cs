@@ -273,7 +273,12 @@ public sealed class {0}";
                     ? string.Empty
                     : string.Format("{0}{1}", member.Annotation, Environment.NewLine);
 
-                writer.WriteLine(MemberTemplate, annotation, idx, member.Type, GeneratorUtil.MemberCase(member.Name));
+                var isRequired = string.Empty;
+                if (annotation.IndexOf("required", StringComparison.InvariantCultureIgnoreCase) > 0)
+                {
+                    isRequired = ", IsRequired=true";
+                }
+                writer.WriteLine(MemberTemplate, annotation, idx, member.Type, GeneratorUtil.MemberCase(member.Name), isRequired);
                 
                 idx += 1;
             }
