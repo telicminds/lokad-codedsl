@@ -10,7 +10,7 @@ namespace Lokad.CodeDsl
     {
         public string ClassNameTemplate { get; set; }
         public string MemberTemplate { get; set; }
-        
+
         public string Region { get; set; }
         public string GenerateInterfaceForEntityWithModifiers { get; set; }
         public string TemplateForInterfaceName { get; set; }
@@ -34,7 +34,7 @@ public sealed class {0}";
         {
             var writer = new CodeWriter(outer);
 
-            
+
             foreach (var source in context.Using.Distinct().OrderBy(s => s))
             {
                 writer.WriteLine("using {0};", source);
@@ -71,16 +71,16 @@ public sealed class {0}";
         {
             foreach (var contract in context.Contracts)
             {
-//                if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "?") != null)
-//                {
-//                    writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern, string.Format(@"
-//[Validator(typeof({0}Validator))]", contract.Name));
-//                }
-//                else
-//                {
-                    writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern, string.Empty);
+                //                if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "?") != null)
+                //                {
+                //                    writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern, string.Format(@"
+                //[Validator(typeof({0}Validator))]", contract.Name));
+                //                }
+                //                else
+                //                {
+                writer.Write(ClassNameTemplate, contract.Name, context.CurrentExtern, string.Empty);
                 //}
-                
+
                 if (contract.Modifiers.Any())
                 {
                     if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") !=
@@ -104,7 +104,7 @@ public sealed class {0}";
 
                     writer.WriteLine();
                     WritePrivateCtor(writer, contract);
-                    if(contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") != null)
+                    if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") != null)
                     {
                         writer.Write("public {0} (TenancyId tenancyId, int aggregateVersion, ", contract.Name);
                     }
@@ -113,7 +113,7 @@ public sealed class {0}";
                         writer.Write("public {0} (", contract.Name);
                     }
                     WriteParameters(contract, writer);
-                    if(contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") != null)
+                    if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface != "IIdentity") != null)
                     {
                         writer.WriteLine(") : base(tenancyId, id, aggregateVersion)");
                     }
@@ -131,6 +131,13 @@ public sealed class {0}";
 
                 }
                 WriteToString(writer, contract);
+                if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface == "IIdentity") != null)
+                {
+                    writer.WriteLine(@"public override string ToString()
+{
+    return Id.ToString();
+}");
+                }
                 writer.Indent -= 1;
                 writer.WriteLine("}");
             }
@@ -184,7 +191,7 @@ public sealed class {0}";
             {
                 text = ReplaceAdd(text, "{" + member.DslName + ":", "{" + active.Count + ":", active, member);
                 text = ReplaceAdd(text, "{" + member.DslName + "}", "{" + active.Count + "}", active, member);
-                
+
 
                 if (member.DslName != member.Name)
                 {
@@ -250,11 +257,11 @@ public sealed class {0}";
                     if (member == "!")
                     {
                         writer.WriteLine("void Apply({0} {1});", contract.Name, "e");
-                    
+
                     }
                     else
                     {
-                        writer.WriteLine("void When({0} {1});", contract.Name, "c");   
+                        writer.WriteLine("void When({0} {1});", contract.Name, "c");
                     }
                 }
                 writer.Indent -= 1;
@@ -269,7 +276,7 @@ public sealed class {0}";
             var idx = 1;
             foreach (var member in message.Members)
             {
-                var annotation = string.IsNullOrWhiteSpace(member.Annotation) 
+                var annotation = string.IsNullOrWhiteSpace(member.Annotation)
                     ? string.Empty
                     : string.Format("{0}{1}", member.Annotation, Environment.NewLine);
 
@@ -279,7 +286,7 @@ public sealed class {0}";
                     isRequired = ", IsRequired=true";
                 }
                 writer.WriteLine(MemberTemplate, annotation, idx, member.Type, GeneratorUtil.MemberCase(member.Name), isRequired);
-                
+
                 idx += 1;
             }
         }
@@ -322,8 +329,8 @@ public sealed class {0}";
         public void Write(string format, params object[] args)
         {
             var txt = string.Format(format, args);
-            var lines = txt.Split(new[] {Environment.NewLine}, StringSplitOptions.None);
-            
+            var lines = txt.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -343,10 +350,10 @@ public sealed class {0}";
 
         public void WriteLine(string format, params object[] args)
         {
-            
+
             var txt = args.Length == 0 ? format : string.Format(format, args);
-            var lines = txt.Split(new[] {Environment.NewLine}, StringSplitOptions.None);
-            
+            var lines = txt.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
 
             foreach (string t in lines)
             {
