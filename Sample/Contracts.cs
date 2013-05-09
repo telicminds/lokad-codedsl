@@ -22,6 +22,42 @@ namespace Lokad
         {
             return Id.ToString();
         }
+        
+        protected bool Equals(UniverseId other)
+        {
+            return Id.Equals(other.Id);
+        }
+        
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((UniverseId) obj);
+        }
+        
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
+        
+        public static bool operator ==(UniverseId a, UniverseId b)
+        {
+            if (ReferenceEquals(a, b))
+            {
+                return true;
+            }
+            if (((object) a == null) || ((object) b == null))
+            {
+                return false;
+            }
+            return a.Equals(b);
+        }
+        
+        public static bool operator !=(UniverseId a, UniverseId b)
+        {
+            return !(a == b);
+        }
     }
     [DataContract(Namespace = "Lokad")]
     public partial class GalaxyId : IIdentity
@@ -37,6 +73,42 @@ namespace Lokad
         public override string ToString()
         {
             return Id.ToString();
+        }
+        
+        protected bool Equals(GalaxyId other)
+        {
+            return Id.Equals(other.Id);
+        }
+        
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((GalaxyId) obj);
+        }
+        
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
+        
+        public static bool operator ==(GalaxyId a, GalaxyId b)
+        {
+            if (ReferenceEquals(a, b))
+            {
+                return true;
+            }
+            if (((object) a == null) || ((object) b == null))
+            {
+                return false;
+            }
+            return a.Equals(b);
+        }
+        
+        public static bool operator !=(GalaxyId a, GalaxyId b)
+        {
+            return !(a == b);
         }
     }
     [DataContract(Namespace = "Lokad")]
@@ -218,6 +290,7 @@ namespace Lokad
         public GalaxyId GalaxyId { get; set; }
         [DataMember(Order = 3)]
         public string Name { get; set; }
+        [GreaterThanOrEqualTo("Mins", kalle.e)]
         [DataMember(Order = 4)]
         public string Reason { get; set; }
         [DataMember(Order = 5)]

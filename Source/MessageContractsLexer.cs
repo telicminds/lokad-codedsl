@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 MessageContracts.g 2013-01-31 16:33:27
+// $ANTLR 3.4.1.9004 MessageContracts.g 2013-05-09 14:17:24
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -1579,9 +1579,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = ANNOTATION;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:158:5: ( '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | ',' | ' ' | '\\(' | '\\)' )* ']' )
+    		// MessageContracts.g:158:5: ( '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )* ']' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:158:7: '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | ',' | ' ' | '\\(' | '\\)' )* ']'
+    		// MessageContracts.g:158:7: '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )* ']'
     		{
     		DebugLocation(158, 7);
     		Match('['); 
@@ -1599,7 +1599,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		}
 
     		DebugLocation(158, 42);
-    		// MessageContracts.g:158:42: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | ',' | ' ' | '\\(' | '\\)' )*
+    		// MessageContracts.g:158:42: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )*
     		try { DebugEnterSubRule(10);
     		while (true)
     		{
@@ -1607,7 +1607,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			try { DebugEnterDecision(10, decisionCanBacktrack[10]);
     			int LA10_1 = input.LA(1);
 
-    			if ((LA10_1==' '||(LA10_1>='(' && LA10_1<=')')||LA10_1==','||(LA10_1>='0' && LA10_1<='9')||LA10_1=='<'||LA10_1=='>'||(LA10_1>='A' && LA10_1<='Z')||LA10_1=='_'||(LA10_1>='a' && LA10_1<='z')))
+    			if ((LA10_1==' '||LA10_1=='\"'||(LA10_1>='(' && LA10_1<=')')||LA10_1==','||LA10_1=='.'||(LA10_1>='0' && LA10_1<='9')||LA10_1=='<'||LA10_1=='>'||(LA10_1>='A' && LA10_1<='Z')||LA10_1=='_'||(LA10_1>='a' && LA10_1<='z')))
     			{
     				alt10 = 1;
     			}
@@ -1637,7 +1637,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(10); }
 
-    		DebugLocation(158, 102);
+    		DebugLocation(158, 111);
     		Match(']'); 
 
     		}

@@ -42,6 +42,6 @@ interface Universe(UniverseId Id)
             explicit "[{dateUtc:yyyy.MM.dd HH:mm}] Galaxy {name} of type {type} added to universe."
     WipeGalaxy?(GalaxyId galaxyId, string reason)
         explicit "Wipe galaxy {galaxyId}, reason - {reason}"
-        GalaxyWiped!(GalaxyId galaxyId, name, string reason, dateUtc)
+        GalaxyWiped!(GalaxyId galaxyId, name, [GreaterThanOrEqualTo("Mins")] string reason, dateUtc)
             explicit "[{dateUtc:yyyy.MM.dd HH:mm}] Galaxy {name} wiped, reason - {reason}"
 }
