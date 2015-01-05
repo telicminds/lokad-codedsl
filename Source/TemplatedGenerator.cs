@@ -134,45 +134,55 @@ public sealed class {0}";
                 if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "!" && c.Interface == "IIdentity") != null)
                 {
                     writer.WriteLine(@"public override string ToString()
-{{
-    return Id.ToString();
-}}
+		{{
+			return Id.ToString();
+		}}
 
-protected bool Equals({0} other)
-{{
-    return Id.Equals(other.Id);
-}}
+		protected bool Equals({0} other)
+		{{
+			return Id.Equals(other.Id);
+		}}
 
-public override bool Equals(object obj)
-{{
-    if (ReferenceEquals(null, obj)) return false;
-    if (ReferenceEquals(this, obj)) return true;
-    if (obj.GetType() != this.GetType()) return false;
-    return Equals(({0}) obj);
-}}
+		public override bool Equals(object obj)
+		{{
+			if (ReferenceEquals(null, obj)) return false;
+			if (ReferenceEquals(this, obj)) return true;
+			if (obj.GetType() != this.GetType()) return false;
+			return Equals(({0}) obj);
+		}}
 
-public override int GetHashCode()
-{{
-    return Id.GetHashCode();
-}}
+		public override int GetHashCode()
+		{{
+			return Id.GetHashCode();
+		}}
 
-public static bool operator ==({0} a, {0} b)
-{{
-    if (ReferenceEquals(a, b))
-    {{
-        return true;
-    }}
-    if (((object) a == null) || ((object) b == null))
-    {{
-        return false;
-    }}
-    return a.Equals(b);
-}}
+		public static bool operator ==({0} a, {0} b)
+		{{
+			if (ReferenceEquals(a, b))
+			{{
+				return true;
+			}}
+			if (((object) a == null) || ((object) b == null))
+			{{
+				return false;
+			}}
+			return a.Equals(b);
+		}}
 
-public static bool operator !=({0} a, {0} b)
-{{
-    return !(a == b);
-}}", contract.Name);
+		public static bool operator !=({0} a, {0} b)
+		{{
+			return !(a == b);
+		}}
+
+		public static {0} New()
+		{{
+			return new {0}(Guid.NewGuid());
+		}}
+
+		public static {0} Empty()
+		{{
+			return new {0}(Guid.Empty);
+		}}", contract.Name);
                 }
                 writer.Indent -= 1;
                 writer.WriteLine("}");
