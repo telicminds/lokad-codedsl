@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 MessageContracts.g 2013-05-09 14:17:24
+// $ANTLR 3.4.1.9004 c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g 2014-12-16 21:56:31
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -93,7 +93,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
 
 		OnCreated();
 	}
-	public override string GrammarFileName { get { return "MessageContracts.g"; } }
+	public override string GrammarFileName { get { return "c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g"; } }
 
 	private static readonly bool[] decisionCanBacktrack = new bool[0];
 
@@ -120,9 +120,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__39;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:9:7: ( '(' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:9:7: ( '(' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:9:9: '('
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:9:9: '('
     		{
     		DebugLocation(9, 9);
     		Match('('); 
@@ -157,9 +157,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__40;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:10:7: ( ')' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:10:7: ( ')' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:10:9: ')'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:10:9: ')'
     		{
     		DebugLocation(10, 9);
     		Match(')'); 
@@ -194,9 +194,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__41;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:11:7: ( ',' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:11:7: ( ',' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:11:9: ','
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:11:9: ','
     		{
     		DebugLocation(11, 9);
     		Match(','); 
@@ -231,9 +231,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__42;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:12:7: ( '.' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:12:7: ( '.' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:12:9: '.'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:12:9: '.'
     		{
     		DebugLocation(12, 9);
     		Match('.'); 
@@ -268,9 +268,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__43;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:13:7: ( ';' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:13:7: ( ';' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:13:9: ';'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:13:9: ';'
     		{
     		DebugLocation(13, 9);
     		Match(';'); 
@@ -305,9 +305,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__44;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:14:7: ( '=' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:14:7: ( '=' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:14:9: '='
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:14:9: '='
     		{
     		DebugLocation(14, 9);
     		Match('='); 
@@ -342,9 +342,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__45;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:15:7: ( '{' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:15:7: ( '{' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:15:9: '{'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:15:9: '{'
     		{
     		DebugLocation(15, 9);
     		Match('{'); 
@@ -379,9 +379,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__46;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:16:7: ( '}' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:16:7: ( '}' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:16:9: '}'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:16:9: '}'
     		{
     		DebugLocation(16, 9);
     		Match('}'); 
@@ -416,9 +416,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = EXPLICIT;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:90:2: ( 'explicit' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:90:2: ( 'explicit' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:90:4: 'explicit'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:90:4: 'explicit'
     		{
     		DebugLocation(90, 4);
     		Match("explicit"); 
@@ -454,9 +454,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = IF;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:92:2: ( 'if' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:92:2: ( 'if' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:92:4: 'if'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:92:4: 'if'
     		{
     		DebugLocation(92, 4);
     		Match("if"); 
@@ -492,9 +492,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = USING;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:94:5: ( 'using' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:94:5: ( 'using' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:94:7: 'using'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:94:7: 'using'
     		{
     		DebugLocation(94, 7);
     		Match("using"); 
@@ -530,9 +530,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = CONST;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:96:2: ( 'const' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:96:2: ( 'const' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:96:4: 'const'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:96:4: 'const'
     		{
     		DebugLocation(96, 4);
     		Match("const"); 
@@ -568,9 +568,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = INTERFACE;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:98:2: ( 'interface' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:98:2: ( 'interface' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:98:4: 'interface'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:98:4: 'interface'
     		{
     		DebugLocation(98, 4);
     		Match("interface"); 
@@ -606,9 +606,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = NAMESPACE;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:101:2: ( 'namespace' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:101:2: ( 'namespace' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:101:4: 'namespace'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:101:4: 'namespace'
     		{
     		DebugLocation(101, 4);
     		Match("namespace"); 
@@ -644,9 +644,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = EXTERN;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:103:5: ( 'extern' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:103:5: ( 'extern' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:103:7: 'extern'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:103:7: 'extern'
     		{
     		DebugLocation(103, 7);
     		Match("extern"); 
@@ -682,65 +682,264 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = ID;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:105:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )* )
-    		DebugEnterAlt(1);
-    		// MessageContracts.g:105:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )*
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )* | ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( '<' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( ',' ) ( ' ' )* ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( '>' ) )
+    		int alt6=2;
+    		try { DebugEnterDecision(6, decisionCanBacktrack[6]);
+    		try
     		{
-    		DebugLocation(105, 7);
-    		if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
+    			alt6 = dfa6.Predict(input);
+    		}
+    		catch (NoViableAltException nvae)
     		{
+    			DebugRecognitionException(nvae);
+    			throw;
+    		}
+    		} finally { DebugExitDecision(6); }
+    		switch (alt6)
+    		{
+    		case 1:
+    			DebugEnterAlt(1);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )*
+    			{
+    			DebugLocation(105, 7);
     			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
 
-    		DebugLocation(105, 30);
-    		// MessageContracts.g:105:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )*
-    		try { DebugEnterSubRule(1);
-    		while (true)
-    		{
-    			int alt1=2;
-    			try { DebugEnterDecision(1, decisionCanBacktrack[1]);
-    			int LA1_1 = input.LA(1);
-
-    			if (((LA1_1>='0' && LA1_1<='9')||LA1_1=='<'||LA1_1=='>'||(LA1_1>='A' && LA1_1<='[')||LA1_1==']'||LA1_1=='_'||(LA1_1>='a' && LA1_1<='z')))
+    			DebugLocation(105, 30);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )*
+    			try { DebugEnterSubRule(1);
+    			while (true)
     			{
-    				alt1 = 1;
-    			}
+    				int alt1=2;
+    				try { DebugEnterDecision(1, decisionCanBacktrack[1]);
+    				int LA1_1 = input.LA(1);
 
-
-    			} finally { DebugExitDecision(1); }
-    			switch ( alt1 )
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// MessageContracts.g:
+    				if (((LA1_1>='0' && LA1_1<='9')||LA1_1=='<'||LA1_1=='>'||(LA1_1>='A' && LA1_1<='[')||LA1_1==']'||LA1_1=='_'||(LA1_1>='a' && LA1_1<='z')))
     				{
-    				DebugLocation(105, 30);
-    				input.Consume();
-
-
+    					alt1 = 1;
     				}
-    				break;
 
-    			default:
-    				goto loop1;
+
+    				} finally { DebugExitDecision(1); }
+    				switch ( alt1 )
+    				{
+    				case 1:
+    					DebugEnterAlt(1);
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
+    					{
+    					DebugLocation(105, 30);
+    					input.Consume();
+
+
+    					}
+    					break;
+
+    				default:
+    					goto loop1;
+    				}
     			}
+
+    			loop1:
+    				;
+
+    			} finally { DebugExitSubRule(1); }
+
+
+    			}
+    			break;
+    		case 2:
+    			DebugEnterAlt(2);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:82: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( '<' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( ',' ) ( ' ' )* ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( '>' )
+    			{
+    			DebugLocation(105, 82);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:82: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
+    			try { DebugEnterSubRule(2);
+    			while (true)
+    			{
+    				int alt2=2;
+    				try { DebugEnterDecision(2, decisionCanBacktrack[2]);
+    				int LA2_1 = input.LA(1);
+
+    				if (((LA2_1>='A' && LA2_1<='Z')||LA2_1=='_'||(LA2_1>='a' && LA2_1<='z')))
+    				{
+    					alt2 = 1;
+    				}
+
+
+    				} finally { DebugExitDecision(2); }
+    				switch ( alt2 )
+    				{
+    				case 1:
+    					DebugEnterAlt(1);
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
+    					{
+    					DebugLocation(105, 82);
+    					input.Consume();
+
+
+    					}
+    					break;
+
+    				default:
+    					goto loop2;
+    				}
+    			}
+
+    			loop2:
+    				;
+
+    			} finally { DebugExitSubRule(2); }
+
+    			DebugLocation(105, 106);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:106: ( '<' )
+    			DebugEnterAlt(1);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:107: '<'
+    			{
+    			DebugLocation(105, 107);
+    			Match('<'); 
+
+    			}
+
+    			DebugLocation(105, 111);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:111: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
+    			try { DebugEnterSubRule(3);
+    			while (true)
+    			{
+    				int alt3=2;
+    				try { DebugEnterDecision(3, decisionCanBacktrack[3]);
+    				int LA3_1 = input.LA(1);
+
+    				if (((LA3_1>='A' && LA3_1<='Z')||LA3_1=='_'||(LA3_1>='a' && LA3_1<='z')))
+    				{
+    					alt3 = 1;
+    				}
+
+
+    				} finally { DebugExitDecision(3); }
+    				switch ( alt3 )
+    				{
+    				case 1:
+    					DebugEnterAlt(1);
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
+    					{
+    					DebugLocation(105, 111);
+    					input.Consume();
+
+
+    					}
+    					break;
+
+    				default:
+    					goto loop3;
+    				}
+    			}
+
+    			loop3:
+    				;
+
+    			} finally { DebugExitSubRule(3); }
+
+    			DebugLocation(105, 135);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:135: ( ',' )
+    			DebugEnterAlt(1);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:136: ','
+    			{
+    			DebugLocation(105, 136);
+    			Match(','); 
+
+    			}
+
+    			DebugLocation(105, 140);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:140: ( ' ' )*
+    			try { DebugEnterSubRule(4);
+    			while (true)
+    			{
+    				int alt4=2;
+    				try { DebugEnterDecision(4, decisionCanBacktrack[4]);
+    				int LA4_1 = input.LA(1);
+
+    				if ((LA4_1==' '))
+    				{
+    					alt4 = 1;
+    				}
+
+
+    				} finally { DebugExitDecision(4); }
+    				switch ( alt4 )
+    				{
+    				case 1:
+    					DebugEnterAlt(1);
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:141: ' '
+    					{
+    					DebugLocation(105, 141);
+    					Match(' '); 
+
+    					}
+    					break;
+
+    				default:
+    					goto loop4;
+    				}
+    			}
+
+    			loop4:
+    				;
+
+    			} finally { DebugExitSubRule(4); }
+
+    			DebugLocation(105, 146);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:146: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
+    			try { DebugEnterSubRule(5);
+    			while (true)
+    			{
+    				int alt5=2;
+    				try { DebugEnterDecision(5, decisionCanBacktrack[5]);
+    				int LA5_1 = input.LA(1);
+
+    				if (((LA5_1>='A' && LA5_1<='Z')||LA5_1=='_'||(LA5_1>='a' && LA5_1<='z')))
+    				{
+    					alt5 = 1;
+    				}
+
+
+    				} finally { DebugExitDecision(5); }
+    				switch ( alt5 )
+    				{
+    				case 1:
+    					DebugEnterAlt(1);
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
+    					{
+    					DebugLocation(105, 146);
+    					input.Consume();
+
+
+    					}
+    					break;
+
+    				default:
+    					goto loop5;
+    				}
+    			}
+
+    			loop5:
+    				;
+
+    			} finally { DebugExitSubRule(5); }
+
+    			DebugLocation(105, 170);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:170: ( '>' )
+    			DebugEnterAlt(1);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:105:171: '>'
+    			{
+    			DebugLocation(105, 171);
+    			Match('>'); 
+
+    			}
+
+
+    			}
+    			break;
+
     		}
-
-    		loop1:
-    			;
-
-    		} finally { DebugExitSubRule(1); }
-
-
-    		}
-
     		state.type = _type;
     		state.channel = _channel;
     	}
@@ -769,9 +968,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = Modifier;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:109:2: ( '?' | '!' | ';' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:109:2: ( '?' | '!' | ';' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
     		{
     		DebugLocation(109, 2);
     		if (input.LA(1)=='!'||input.LA(1)==';'||input.LA(1)=='?')
@@ -817,32 +1016,32 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = INT;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:115:5: ( ( '0' .. '9' )+ )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:115:5: ( ( '0' .. '9' )+ )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:115:7: ( '0' .. '9' )+
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:115:7: ( '0' .. '9' )+
     		{
     		DebugLocation(115, 7);
-    		// MessageContracts.g:115:7: ( '0' .. '9' )+
-    		int cnt2=0;
-    		try { DebugEnterSubRule(2);
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:115:7: ( '0' .. '9' )+
+    		int cnt7=0;
+    		try { DebugEnterSubRule(7);
     		while (true)
     		{
-    			int alt2=2;
-    			try { DebugEnterDecision(2, decisionCanBacktrack[2]);
-    			int LA2_1 = input.LA(1);
+    			int alt7=2;
+    			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
+    			int LA7_1 = input.LA(1);
 
-    			if (((LA2_1>='0' && LA2_1<='9')))
+    			if (((LA7_1>='0' && LA7_1<='9')))
     			{
-    				alt2 = 1;
+    				alt7 = 1;
     			}
 
 
-    			} finally { DebugExitDecision(2); }
-    			switch (alt2)
+    			} finally { DebugExitDecision(7); }
+    			switch (alt7)
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// MessageContracts.g:
+    				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
     				{
     				DebugLocation(115, 7);
     				input.Consume();
@@ -852,19 +1051,19 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     				break;
 
     			default:
-    				if (cnt2 >= 1)
-    					goto loop2;
+    				if (cnt7 >= 1)
+    					goto loop7;
 
-    				EarlyExitException eee2 = new EarlyExitException( 2, input );
-    				DebugRecognitionException(eee2);
-    				throw eee2;
+    				EarlyExitException eee7 = new EarlyExitException( 7, input );
+    				DebugRecognitionException(eee7);
+    				throw eee7;
     			}
-    			cnt2++;
+    			cnt7++;
     		}
-    		loop2:
+    		loop7:
     			;
 
-    		} finally { DebugExitSubRule(2); }
+    		} finally { DebugExitSubRule(7); }
 
 
     		}
@@ -897,37 +1096,37 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = STRING;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:119:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:119:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:119:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:119:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
     		{
     		DebugLocation(119, 8);
     		Match('\"'); 
     		DebugLocation(119, 12);
-    		// MessageContracts.g:119:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
-    		try { DebugEnterSubRule(3);
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:119:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+    		try { DebugEnterSubRule(8);
     		while (true)
     		{
-    			int alt3=3;
-    			try { DebugEnterDecision(3, decisionCanBacktrack[3]);
-    			int LA3_1 = input.LA(1);
+    			int alt8=3;
+    			try { DebugEnterDecision(8, decisionCanBacktrack[8]);
+    			int LA8_1 = input.LA(1);
 
-    			if ((LA3_1=='\\'))
+    			if ((LA8_1=='\\'))
     			{
-    				alt3 = 1;
+    				alt8 = 1;
     			}
-    			else if (((LA3_1>='\u0000' && LA3_1<='!')||(LA3_1>='#' && LA3_1<='[')||(LA3_1>=']' && LA3_1<='\uFFFF')))
+    			else if (((LA8_1>='\u0000' && LA8_1<='!')||(LA8_1>='#' && LA8_1<='[')||(LA8_1>=']' && LA8_1<='\uFFFF')))
     			{
-    				alt3 = 2;
+    				alt8 = 2;
     			}
 
 
-    			} finally { DebugExitDecision(3); }
-    			switch ( alt3 )
+    			} finally { DebugExitDecision(8); }
+    			switch ( alt8 )
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// MessageContracts.g:119:14: ESC_SEQ
+    				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:119:14: ESC_SEQ
     				{
     				DebugLocation(119, 14);
     				mESC_SEQ(); 
@@ -936,7 +1135,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     				break;
     			case 2:
     				DebugEnterAlt(2);
-    				// MessageContracts.g:119:24: ~ ( '\\\\' | '\"' )
+    				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:119:24: ~ ( '\\\\' | '\"' )
     				{
     				DebugLocation(119, 24);
     				input.Consume();
@@ -946,14 +1145,14 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     				break;
 
     			default:
-    				goto loop3;
+    				goto loop8;
     			}
     		}
 
-    		loop3:
+    		loop8:
     			;
 
-    		} finally { DebugExitSubRule(3); }
+    		} finally { DebugExitSubRule(8); }
 
     		DebugLocation(119, 39);
     		Match('\"'); 
@@ -986,9 +1185,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     	TraceIn("HEX_DIGIT", 20);
     		try
     		{
-    		// MessageContracts.g:125:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:125:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
     		{
     		DebugLocation(125, 11);
     		if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
@@ -1030,12 +1229,12 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     	TraceIn("ESC_SEQ", 21);
     		try
     		{
-    		// MessageContracts.g:129:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
-    		int alt4=3;
-    		try { DebugEnterDecision(4, decisionCanBacktrack[4]);
-    		int LA4_1 = input.LA(1);
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:129:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+    		int alt9=3;
+    		try { DebugEnterDecision(9, decisionCanBacktrack[9]);
+    		int LA9_1 = input.LA(1);
 
-    		if ((LA4_1=='\\'))
+    		if ((LA9_1=='\\'))
     		{
     			switch (input.LA(2))
     			{
@@ -1048,12 +1247,12 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			case 'r':
     			case 't':
     				{
-    				alt4 = 1;
+    				alt9 = 1;
     				}
     				break;
     			case 'u':
     				{
-    				alt4 = 2;
+    				alt9 = 2;
     				}
     				break;
     			case '0':
@@ -1065,12 +1264,12 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			case '6':
     			case '7':
     				{
-    				alt4 = 3;
+    				alt9 = 3;
     				}
     				break;
     			default:
     				{
-    					NoViableAltException nvae = new NoViableAltException("", 4, 1, input, 2);
+    					NoViableAltException nvae = new NoViableAltException("", 9, 1, input, 2);
     					DebugRecognitionException(nvae);
     					throw nvae;
     				}
@@ -1079,16 +1278,16 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		}
     		else
     		{
-    			NoViableAltException nvae = new NoViableAltException("", 4, 0, input, 1);
+    			NoViableAltException nvae = new NoViableAltException("", 9, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
     		}
-    		} finally { DebugExitDecision(4); }
-    		switch (alt4)
+    		} finally { DebugExitDecision(9); }
+    		switch (alt9)
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// MessageContracts.g:129:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:129:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
     			{
     			DebugLocation(129, 9);
     			Match('\\'); 
@@ -1100,7 +1299,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// MessageContracts.g:130:9: UNICODE_ESC
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:130:9: UNICODE_ESC
     			{
     			DebugLocation(130, 9);
     			mUNICODE_ESC(); 
@@ -1109,7 +1308,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// MessageContracts.g:131:9: OCTAL_ESC
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:131:9: OCTAL_ESC
     			{
     			DebugLocation(131, 9);
     			mOCTAL_ESC(); 
@@ -1142,69 +1341,69 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     	TraceIn("OCTAL_ESC", 22);
     		try
     		{
-    		// MessageContracts.g:136:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
-    		int alt5=3;
-    		try { DebugEnterDecision(5, decisionCanBacktrack[5]);
-    		int LA5_1 = input.LA(1);
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:136:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+    		int alt10=3;
+    		try { DebugEnterDecision(10, decisionCanBacktrack[10]);
+    		int LA10_1 = input.LA(1);
 
-    		if ((LA5_1=='\\'))
+    		if ((LA10_1=='\\'))
     		{
-    			int LA5_2 = input.LA(2);
+    			int LA10_2 = input.LA(2);
 
-    			if (((LA5_2>='0' && LA5_2<='3')))
+    			if (((LA10_2>='0' && LA10_2<='3')))
     			{
-    				int LA5_3 = input.LA(3);
+    				int LA10_3 = input.LA(3);
 
-    				if (((LA5_3>='0' && LA5_3<='7')))
+    				if (((LA10_3>='0' && LA10_3<='7')))
     				{
-    					int LA5_4 = input.LA(4);
+    					int LA10_4 = input.LA(4);
 
-    					if (((LA5_4>='0' && LA5_4<='7')))
+    					if (((LA10_4>='0' && LA10_4<='7')))
     					{
-    						alt5 = 1;
+    						alt10 = 1;
     					}
     					else
     					{
-    						alt5 = 2;
+    						alt10 = 2;
     					}
     				}
     				else
     				{
-    					alt5 = 3;
+    					alt10 = 3;
     				}
     			}
-    			else if (((LA5_2>='4' && LA5_2<='7')))
+    			else if (((LA10_2>='4' && LA10_2<='7')))
     			{
-    				int LA5_3 = input.LA(3);
+    				int LA10_3 = input.LA(3);
 
-    				if (((LA5_3>='0' && LA5_3<='7')))
+    				if (((LA10_3>='0' && LA10_3<='7')))
     				{
-    					alt5 = 2;
+    					alt10 = 2;
     				}
     				else
     				{
-    					alt5 = 3;
+    					alt10 = 3;
     				}
     			}
     			else
     			{
-    				NoViableAltException nvae = new NoViableAltException("", 5, 1, input, 2);
+    				NoViableAltException nvae = new NoViableAltException("", 10, 1, input, 2);
     				DebugRecognitionException(nvae);
     				throw nvae;
     			}
     		}
     		else
     		{
-    			NoViableAltException nvae = new NoViableAltException("", 5, 0, input, 1);
+    			NoViableAltException nvae = new NoViableAltException("", 10, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
     		}
-    		} finally { DebugExitDecision(5); }
-    		switch (alt5)
+    		} finally { DebugExitDecision(10); }
+    		switch (alt10)
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// MessageContracts.g:136:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:136:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
     			{
     			DebugLocation(136, 9);
     			Match('\\'); 
@@ -1222,7 +1421,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// MessageContracts.g:137:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:137:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
     			{
     			DebugLocation(137, 9);
     			Match('\\'); 
@@ -1237,7 +1436,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// MessageContracts.g:138:9: '\\\\' ( '0' .. '7' )
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:138:9: '\\\\' ( '0' .. '7' )
     			{
     			DebugLocation(138, 9);
     			Match('\\'); 
@@ -1273,9 +1472,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     	TraceIn("UNICODE_ESC", 23);
     		try
     		{
-    		// MessageContracts.g:143:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:143:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:143:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:143:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     		{
     		DebugLocation(143, 9);
     		Match('\\'); 
@@ -1318,67 +1517,67 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = COMMENT;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:146:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-    		int alt9=2;
-    		try { DebugEnterDecision(9, decisionCanBacktrack[9]);
-    		int LA9_1 = input.LA(1);
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:146:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+    		int alt14=2;
+    		try { DebugEnterDecision(14, decisionCanBacktrack[14]);
+    		int LA14_1 = input.LA(1);
 
-    		if ((LA9_1=='/'))
+    		if ((LA14_1=='/'))
     		{
-    			int LA9_2 = input.LA(2);
+    			int LA14_2 = input.LA(2);
 
-    			if ((LA9_2=='/'))
+    			if ((LA14_2=='/'))
     			{
-    				alt9 = 1;
+    				alt14 = 1;
     			}
-    			else if ((LA9_2=='*'))
+    			else if ((LA14_2=='*'))
     			{
-    				alt9 = 2;
+    				alt14 = 2;
     			}
     			else
     			{
-    				NoViableAltException nvae = new NoViableAltException("", 9, 1, input, 2);
+    				NoViableAltException nvae = new NoViableAltException("", 14, 1, input, 2);
     				DebugRecognitionException(nvae);
     				throw nvae;
     			}
     		}
     		else
     		{
-    			NoViableAltException nvae = new NoViableAltException("", 9, 0, input, 1);
+    			NoViableAltException nvae = new NoViableAltException("", 14, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
     		}
-    		} finally { DebugExitDecision(9); }
-    		switch (alt9)
+    		} finally { DebugExitDecision(14); }
+    		switch (alt14)
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// MessageContracts.g:146:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:146:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
     			{
     			DebugLocation(146, 9);
     			Match("//"); 
 
     			DebugLocation(146, 14);
-    			// MessageContracts.g:146:14: (~ ( '\\n' | '\\r' ) )*
-    			try { DebugEnterSubRule(6);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:146:14: (~ ( '\\n' | '\\r' ) )*
+    			try { DebugEnterSubRule(11);
     			while (true)
     			{
-    				int alt6=2;
-    				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
-    				int LA6_1 = input.LA(1);
+    				int alt11=2;
+    				try { DebugEnterDecision(11, decisionCanBacktrack[11]);
+    				int LA11_1 = input.LA(1);
 
-    				if (((LA6_1>='\u0000' && LA6_1<='\t')||(LA6_1>='\u000B' && LA6_1<='\f')||(LA6_1>='\u000E' && LA6_1<='\uFFFF')))
+    				if (((LA11_1>='\u0000' && LA11_1<='\t')||(LA11_1>='\u000B' && LA11_1<='\f')||(LA11_1>='\u000E' && LA11_1<='\uFFFF')))
     				{
-    					alt6 = 1;
+    					alt11 = 1;
     				}
 
 
-    				} finally { DebugExitDecision(6); }
-    				switch ( alt6 )
+    				} finally { DebugExitDecision(11); }
+    				switch ( alt11 )
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// MessageContracts.g:
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
     					{
     					DebugLocation(146, 14);
     					input.Consume();
@@ -1388,32 +1587,32 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     					break;
 
     				default:
-    					goto loop6;
+    					goto loop11;
     				}
     			}
 
-    			loop6:
+    			loop11:
     				;
 
-    			} finally { DebugExitSubRule(6); }
+    			} finally { DebugExitSubRule(11); }
 
     			DebugLocation(146, 28);
-    			// MessageContracts.g:146:28: ( '\\r' )?
-    			int alt7=2;
-    			try { DebugEnterSubRule(7);
-    			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
-    			int LA7_1 = input.LA(1);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:146:28: ( '\\r' )?
+    			int alt12=2;
+    			try { DebugEnterSubRule(12);
+    			try { DebugEnterDecision(12, decisionCanBacktrack[12]);
+    			int LA12_1 = input.LA(1);
 
-    			if ((LA7_1=='\r'))
+    			if ((LA12_1=='\r'))
     			{
-    				alt7 = 1;
+    				alt12 = 1;
     			}
-    			} finally { DebugExitDecision(7); }
-    			switch (alt7)
+    			} finally { DebugExitDecision(12); }
+    			switch (alt12)
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// MessageContracts.g:146:28: '\\r'
+    				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:146:28: '\\r'
     				{
     				DebugLocation(146, 28);
     				Match('\r'); 
@@ -1422,7 +1621,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     				break;
 
     			}
-    			} finally { DebugExitSubRule(7); }
+    			} finally { DebugExitSubRule(12); }
 
     			DebugLocation(146, 34);
     			Match('\n'); 
@@ -1433,47 +1632,47 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// MessageContracts.g:147:9: '/*' ( options {greedy=false; } : . )* '*/'
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:147:9: '/*' ( options {greedy=false; } : . )* '*/'
     			{
     			DebugLocation(147, 9);
     			Match("/*"); 
 
     			DebugLocation(147, 14);
-    			// MessageContracts.g:147:14: ( options {greedy=false; } : . )*
-    			try { DebugEnterSubRule(8);
+    			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:147:14: ( options {greedy=false; } : . )*
+    			try { DebugEnterSubRule(13);
     			while (true)
     			{
-    				int alt8=2;
-    				try { DebugEnterDecision(8, decisionCanBacktrack[8]);
-    				int LA8_1 = input.LA(1);
+    				int alt13=2;
+    				try { DebugEnterDecision(13, decisionCanBacktrack[13]);
+    				int LA13_1 = input.LA(1);
 
-    				if ((LA8_1=='*'))
+    				if ((LA13_1=='*'))
     				{
-    					int LA8_2 = input.LA(2);
+    					int LA13_2 = input.LA(2);
 
-    					if ((LA8_2=='/'))
+    					if ((LA13_2=='/'))
     					{
-    						alt8 = 2;
+    						alt13 = 2;
     					}
-    					else if (((LA8_2>='\u0000' && LA8_2<='.')||(LA8_2>='0' && LA8_2<='\uFFFF')))
+    					else if (((LA13_2>='\u0000' && LA13_2<='.')||(LA13_2>='0' && LA13_2<='\uFFFF')))
     					{
-    						alt8 = 1;
+    						alt13 = 1;
     					}
 
 
     				}
-    				else if (((LA8_1>='\u0000' && LA8_1<=')')||(LA8_1>='+' && LA8_1<='\uFFFF')))
+    				else if (((LA13_1>='\u0000' && LA13_1<=')')||(LA13_1>='+' && LA13_1<='\uFFFF')))
     				{
-    					alt8 = 1;
+    					alt13 = 1;
     				}
 
 
-    				} finally { DebugExitDecision(8); }
-    				switch ( alt8 )
+    				} finally { DebugExitDecision(13); }
+    				switch ( alt13 )
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// MessageContracts.g:147:42: .
+    					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:147:42: .
     					{
     					DebugLocation(147, 42);
     					MatchAny(); 
@@ -1482,14 +1681,14 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     					break;
 
     				default:
-    					goto loop8;
+    					goto loop13;
     				}
     			}
 
-    			loop8:
+    			loop13:
     				;
 
-    			} finally { DebugExitSubRule(8); }
+    			} finally { DebugExitSubRule(13); }
 
     			DebugLocation(147, 47);
     			Match("*/"); 
@@ -1529,9 +1728,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = WS;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:150:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:150:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:150:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:150:9: ( ' ' | '\\t' | '\\r' | '\\n' )
     		{
     		DebugLocation(150, 9);
     		if ((input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ')
@@ -1579,9 +1778,9 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		{
     		int _type = ANNOTATION;
     		int _channel = DefaultTokenChannel;
-    		// MessageContracts.g:158:5: ( '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )* ']' )
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:158:5: ( '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )* ']' )
     		DebugEnterAlt(1);
-    		// MessageContracts.g:158:7: '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )* ']'
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:158:7: '[' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ',' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )* ']'
     		{
     		DebugLocation(158, 7);
     		Match('['); 
@@ -1599,26 +1798,26 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		}
 
     		DebugLocation(158, 42);
-    		// MessageContracts.g:158:42: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )*
-    		try { DebugEnterSubRule(10);
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:158:42: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\\"' | '<' | '>' | ',' | '.' | ' ' | '\\(' | '\\)' )*
+    		try { DebugEnterSubRule(15);
     		while (true)
     		{
-    			int alt10=2;
-    			try { DebugEnterDecision(10, decisionCanBacktrack[10]);
-    			int LA10_1 = input.LA(1);
+    			int alt15=2;
+    			try { DebugEnterDecision(15, decisionCanBacktrack[15]);
+    			int LA15_1 = input.LA(1);
 
-    			if ((LA10_1==' '||LA10_1=='\"'||(LA10_1>='(' && LA10_1<=')')||LA10_1==','||LA10_1=='.'||(LA10_1>='0' && LA10_1<='9')||LA10_1=='<'||LA10_1=='>'||(LA10_1>='A' && LA10_1<='Z')||LA10_1=='_'||(LA10_1>='a' && LA10_1<='z')))
+    			if ((LA15_1==' '||LA15_1=='\"'||(LA15_1>='(' && LA15_1<=')')||LA15_1==','||LA15_1=='.'||(LA15_1>='0' && LA15_1<='9')||LA15_1=='<'||LA15_1=='>'||(LA15_1>='A' && LA15_1<='Z')||LA15_1=='_'||(LA15_1>='a' && LA15_1<='z')))
     			{
-    				alt10 = 1;
+    				alt15 = 1;
     			}
 
 
-    			} finally { DebugExitDecision(10); }
-    			switch ( alt10 )
+    			} finally { DebugExitDecision(15); }
+    			switch ( alt15 )
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// MessageContracts.g:
+    				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:
     				{
     				DebugLocation(158, 42);
     				input.Consume();
@@ -1628,14 +1827,14 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     				break;
 
     			default:
-    				goto loop10;
+    				goto loop15;
     			}
     		}
 
-    		loop10:
+    		loop15:
     			;
 
-    		} finally { DebugExitSubRule(10); }
+    		} finally { DebugExitSubRule(15); }
 
     		DebugLocation(158, 111);
     		Match(']'); 
@@ -1656,24 +1855,24 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
 
     public override void mTokens()
     {
-    	// MessageContracts.g:1:8: ( T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | EXPLICIT | IF | USING | CONST | INTERFACE | NAMESPACE | EXTERN | ID | Modifier | INT | STRING | COMMENT | WS | ANNOTATION )
-    	int alt11=22;
-    	try { DebugEnterDecision(11, decisionCanBacktrack[11]);
+    	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:8: ( T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | EXPLICIT | IF | USING | CONST | INTERFACE | NAMESPACE | EXTERN | ID | Modifier | INT | STRING | COMMENT | WS | ANNOTATION )
+    	int alt16=22;
+    	try { DebugEnterDecision(16, decisionCanBacktrack[16]);
     	try
     	{
-    		alt11 = dfa11.Predict(input);
+    		alt16 = dfa16.Predict(input);
     	}
     	catch (NoViableAltException nvae)
     	{
     		DebugRecognitionException(nvae);
     		throw;
     	}
-    	} finally { DebugExitDecision(11); }
-    	switch (alt11)
+    	} finally { DebugExitDecision(16); }
+    	switch (alt16)
     	{
     	case 1:
     		DebugEnterAlt(1);
-    		// MessageContracts.g:1:10: T__39
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:10: T__39
     		{
     		DebugLocation(1, 10);
     		mT__39(); 
@@ -1682,7 +1881,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 2:
     		DebugEnterAlt(2);
-    		// MessageContracts.g:1:16: T__40
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:16: T__40
     		{
     		DebugLocation(1, 16);
     		mT__40(); 
@@ -1691,7 +1890,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 3:
     		DebugEnterAlt(3);
-    		// MessageContracts.g:1:22: T__41
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:22: T__41
     		{
     		DebugLocation(1, 22);
     		mT__41(); 
@@ -1700,7 +1899,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 4:
     		DebugEnterAlt(4);
-    		// MessageContracts.g:1:28: T__42
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:28: T__42
     		{
     		DebugLocation(1, 28);
     		mT__42(); 
@@ -1709,7 +1908,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 5:
     		DebugEnterAlt(5);
-    		// MessageContracts.g:1:34: T__43
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:34: T__43
     		{
     		DebugLocation(1, 34);
     		mT__43(); 
@@ -1718,7 +1917,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 6:
     		DebugEnterAlt(6);
-    		// MessageContracts.g:1:40: T__44
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:40: T__44
     		{
     		DebugLocation(1, 40);
     		mT__44(); 
@@ -1727,7 +1926,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 7:
     		DebugEnterAlt(7);
-    		// MessageContracts.g:1:46: T__45
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:46: T__45
     		{
     		DebugLocation(1, 46);
     		mT__45(); 
@@ -1736,7 +1935,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 8:
     		DebugEnterAlt(8);
-    		// MessageContracts.g:1:52: T__46
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:52: T__46
     		{
     		DebugLocation(1, 52);
     		mT__46(); 
@@ -1745,7 +1944,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 9:
     		DebugEnterAlt(9);
-    		// MessageContracts.g:1:58: EXPLICIT
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:58: EXPLICIT
     		{
     		DebugLocation(1, 58);
     		mEXPLICIT(); 
@@ -1754,7 +1953,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 10:
     		DebugEnterAlt(10);
-    		// MessageContracts.g:1:67: IF
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:67: IF
     		{
     		DebugLocation(1, 67);
     		mIF(); 
@@ -1763,7 +1962,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 11:
     		DebugEnterAlt(11);
-    		// MessageContracts.g:1:70: USING
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:70: USING
     		{
     		DebugLocation(1, 70);
     		mUSING(); 
@@ -1772,7 +1971,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 12:
     		DebugEnterAlt(12);
-    		// MessageContracts.g:1:76: CONST
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:76: CONST
     		{
     		DebugLocation(1, 76);
     		mCONST(); 
@@ -1781,7 +1980,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 13:
     		DebugEnterAlt(13);
-    		// MessageContracts.g:1:82: INTERFACE
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:82: INTERFACE
     		{
     		DebugLocation(1, 82);
     		mINTERFACE(); 
@@ -1790,7 +1989,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 14:
     		DebugEnterAlt(14);
-    		// MessageContracts.g:1:92: NAMESPACE
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:92: NAMESPACE
     		{
     		DebugLocation(1, 92);
     		mNAMESPACE(); 
@@ -1799,7 +1998,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 15:
     		DebugEnterAlt(15);
-    		// MessageContracts.g:1:102: EXTERN
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:102: EXTERN
     		{
     		DebugLocation(1, 102);
     		mEXTERN(); 
@@ -1808,7 +2007,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 16:
     		DebugEnterAlt(16);
-    		// MessageContracts.g:1:109: ID
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:109: ID
     		{
     		DebugLocation(1, 109);
     		mID(); 
@@ -1817,7 +2016,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 17:
     		DebugEnterAlt(17);
-    		// MessageContracts.g:1:112: Modifier
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:112: Modifier
     		{
     		DebugLocation(1, 112);
     		mModifier(); 
@@ -1826,7 +2025,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 18:
     		DebugEnterAlt(18);
-    		// MessageContracts.g:1:121: INT
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:121: INT
     		{
     		DebugLocation(1, 121);
     		mINT(); 
@@ -1835,7 +2034,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 19:
     		DebugEnterAlt(19);
-    		// MessageContracts.g:1:125: STRING
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:125: STRING
     		{
     		DebugLocation(1, 125);
     		mSTRING(); 
@@ -1844,7 +2043,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 20:
     		DebugEnterAlt(20);
-    		// MessageContracts.g:1:132: COMMENT
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:132: COMMENT
     		{
     		DebugLocation(1, 132);
     		mCOMMENT(); 
@@ -1853,7 +2052,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 21:
     		DebugEnterAlt(21);
-    		// MessageContracts.g:1:140: WS
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:140: WS
     		{
     		DebugLocation(1, 140);
     		mWS(); 
@@ -1862,7 +2061,7 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
     		break;
     	case 22:
     		DebugEnterAlt(22);
-    		// MessageContracts.g:1:143: ANNOTATION
+    		// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:1:143: ANNOTATION
     		{
     		DebugLocation(1, 143);
     		mANNOTATION(); 
@@ -1876,47 +2075,113 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
 
 
 	#region DFA
-	DFA11 dfa11;
+	DFA6 dfa6;
+	DFA16 dfa16;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa11 = new DFA11(this);
+		dfa6 = new DFA6(this);
+		dfa16 = new DFA16(this);
 	}
 
-	private class DFA11 : DFA
+	private class DFA6 : DFA
 	{
-		private const string DFA11_eotS =
+		private const string DFA6_eotS =
+			"\x1\xFFFF\x1\x4\x1\xFFFF\x1\x4\x1\xFFFF\x2\x4";
+		private const string DFA6_eofS =
+			"\x7\xFFFF";
+		private const string DFA6_minS =
+			"\x2\x3C\x1\xFFFF\x1\x2C\x1\xFFFF\x1\x3C\x1\x2C";
+		private const string DFA6_maxS =
+			"\x2\x7A\x1\xFFFF\x1\x7A\x1\xFFFF\x2\x7A";
+		private const string DFA6_acceptS =
+			"\x2\xFFFF\x1\x2\x1\xFFFF\x1\x1\x2\xFFFF";
+		private const string DFA6_specialS =
+			"\x7\xFFFF}>";
+		private static readonly string[] DFA6_transitionS =
+			{
+				"\x1\x2\x4\xFFFF\x1A\x1\x4\xFFFF\x1\x1\x1\xFFFF\x1A\x1",
+				"\x1\x3\x4\xFFFF\x1A\x5\x4\xFFFF\x1\x5\x1\xFFFF\x1A\x5",
+				"",
+				"\x1\x2\x14\xFFFF\x1A\x6\x4\xFFFF\x1\x6\x1\xFFFF\x1A\x6",
+				"",
+				"\x1\x3\x4\xFFFF\x1A\x5\x4\xFFFF\x1\x5\x1\xFFFF\x1A\x5",
+				"\x1\x2\x14\xFFFF\x1A\x6\x4\xFFFF\x1\x6\x1\xFFFF\x1A\x6"
+			};
+
+		private static readonly short[] DFA6_eot = DFA.UnpackEncodedString(DFA6_eotS);
+		private static readonly short[] DFA6_eof = DFA.UnpackEncodedString(DFA6_eofS);
+		private static readonly char[] DFA6_min = DFA.UnpackEncodedStringToUnsignedChars(DFA6_minS);
+		private static readonly char[] DFA6_max = DFA.UnpackEncodedStringToUnsignedChars(DFA6_maxS);
+		private static readonly short[] DFA6_accept = DFA.UnpackEncodedString(DFA6_acceptS);
+		private static readonly short[] DFA6_special = DFA.UnpackEncodedString(DFA6_specialS);
+		private static readonly short[][] DFA6_transition;
+
+		static DFA6()
+		{
+			int numStates = DFA6_transitionS.Length;
+			DFA6_transition = new short[numStates][];
+			for ( int i=0; i < numStates; i++ )
+			{
+				DFA6_transition[i] = DFA.UnpackEncodedString(DFA6_transitionS[i]);
+			}
+		}
+
+		public DFA6( BaseRecognizer recognizer )
+		{
+			this.recognizer = recognizer;
+			this.decisionNumber = 6;
+			this.eot = DFA6_eot;
+			this.eof = DFA6_eof;
+			this.min = DFA6_min;
+			this.max = DFA6_max;
+			this.accept = DFA6_accept;
+			this.special = DFA6_special;
+			this.transition = DFA6_transition;
+		}
+
+		public override string Description { get { return "105:1: ID : ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '<' | '>' | '[' | ']' )* | ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( '<' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( ',' ) ( ' ' )* ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* ( '>' ) );"; } }
+
+		public override void Error(NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+		}
+	}
+
+	private class DFA16 : DFA
+	{
+		private const string DFA16_eotS =
 			"\x9\xFFFF\x5\xE\x8\xFFFF\x1\xE\x1\x1E\x6\xE\x1\xFFFF\xD\xE\x1\x32\x1"+
 			"\x33\x2\xE\x1\x36\x1\xE\x2\xFFFF\x2\xE\x1\xFFFF\x2\xE\x1\x3C\x2\xE\x1"+
 			"\xFFFF\x1\x3F\x1\x40\x2\xFFFF";
-		private const string DFA11_eofS =
+		private const string DFA16_eofS =
 			"\x41\xFFFF";
-		private const string DFA11_minS =
+		private const string DFA16_minS =
 			"\x1\x9\x8\xFFFF\x1\x78\x1\x66\x1\x73\x1\x6F\x1\x61\x8\xFFFF\x1\x70\x1"+
 			"\x30\x1\x74\x1\x69\x1\x6E\x1\x6D\x1\x6C\x1\x65\x1\xFFFF\x1\x65\x1\x6E"+
 			"\x1\x73\x1\x65\x1\x69\x2\x72\x1\x67\x1\x74\x1\x73\x1\x63\x1\x6E\x1\x66"+
 			"\x2\x30\x1\x70\x1\x69\x1\x30\x1\x61\x2\xFFFF\x1\x61\x1\x74\x1\xFFFF\x2"+
 			"\x63\x1\x30\x2\x65\x1\xFFFF\x2\x30\x2\xFFFF";
-		private const string DFA11_maxS =
+		private const string DFA16_maxS =
 			"\x1\x7D\x8\xFFFF\x1\x78\x1\x6E\x1\x73\x1\x6F\x1\x61\x8\xFFFF\x1\x74\x1"+
 			"\x7A\x1\x74\x1\x69\x1\x6E\x1\x6D\x1\x6C\x1\x65\x1\xFFFF\x1\x65\x1\x6E"+
 			"\x1\x73\x1\x65\x1\x69\x2\x72\x1\x67\x1\x74\x1\x73\x1\x63\x1\x6E\x1\x66"+
 			"\x2\x7A\x1\x70\x1\x69\x1\x7A\x1\x61\x2\xFFFF\x1\x61\x1\x74\x1\xFFFF\x2"+
 			"\x63\x1\x7A\x2\x65\x1\xFFFF\x2\x7A\x2\xFFFF";
-		private const string DFA11_acceptS =
+		private const string DFA16_acceptS =
 			"\x1\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8\x5\xFFFF\x1"+
 			"\x10\x1\x11\x1\x12\x1\x13\x1\x14\x1\x15\x1\x16\x1\x5\x8\xFFFF\x1\xA\x13"+
 			"\xFFFF\x1\xB\x1\xC\x2\xFFFF\x1\xF\x5\xFFFF\x1\x9\x2\xFFFF\x1\xD\x1\xE";
-		private const string DFA11_specialS =
+		private const string DFA16_specialS =
 			"\x41\xFFFF}>";
-		private static readonly string[] DFA11_transitionS =
+		private static readonly string[] DFA16_transitionS =
 			{
 				"\x2\x13\x2\xFFFF\x1\x13\x12\xFFFF\x1\x13\x1\xF\x1\x11\x5\xFFFF\x1\x1"+
 				"\x1\x2\x2\xFFFF\x1\x3\x1\xFFFF\x1\x4\x1\x12\xA\x10\x1\xFFFF\x1\x5\x1"+
-				"\xFFFF\x1\x6\x1\xFFFF\x1\xF\x1\xFFFF\x1A\xE\x1\x14\x3\xFFFF\x1\xE\x1"+
-				"\xFFFF\x2\xE\x1\xC\x1\xE\x1\x9\x3\xE\x1\xA\x4\xE\x1\xD\x6\xE\x1\xB\x5"+
-				"\xE\x1\x7\x1\xFFFF\x1\x8",
+				"\xE\x1\x6\x1\xFFFF\x1\xF\x1\xFFFF\x1A\xE\x1\x14\x3\xFFFF\x1\xE\x1\xFFFF"+
+				"\x2\xE\x1\xC\x1\xE\x1\x9\x3\xE\x1\xA\x4\xE\x1\xD\x6\xE\x1\xB\x5\xE\x1"+
+				"\x7\x1\xFFFF\x1\x8",
 				"",
 				"",
 				"",
@@ -1990,35 +2255,35 @@ public partial class MessageContractsLexer : Antlr.Runtime.Lexer
 				""
 			};
 
-		private static readonly short[] DFA11_eot = DFA.UnpackEncodedString(DFA11_eotS);
-		private static readonly short[] DFA11_eof = DFA.UnpackEncodedString(DFA11_eofS);
-		private static readonly char[] DFA11_min = DFA.UnpackEncodedStringToUnsignedChars(DFA11_minS);
-		private static readonly char[] DFA11_max = DFA.UnpackEncodedStringToUnsignedChars(DFA11_maxS);
-		private static readonly short[] DFA11_accept = DFA.UnpackEncodedString(DFA11_acceptS);
-		private static readonly short[] DFA11_special = DFA.UnpackEncodedString(DFA11_specialS);
-		private static readonly short[][] DFA11_transition;
+		private static readonly short[] DFA16_eot = DFA.UnpackEncodedString(DFA16_eotS);
+		private static readonly short[] DFA16_eof = DFA.UnpackEncodedString(DFA16_eofS);
+		private static readonly char[] DFA16_min = DFA.UnpackEncodedStringToUnsignedChars(DFA16_minS);
+		private static readonly char[] DFA16_max = DFA.UnpackEncodedStringToUnsignedChars(DFA16_maxS);
+		private static readonly short[] DFA16_accept = DFA.UnpackEncodedString(DFA16_acceptS);
+		private static readonly short[] DFA16_special = DFA.UnpackEncodedString(DFA16_specialS);
+		private static readonly short[][] DFA16_transition;
 
-		static DFA11()
+		static DFA16()
 		{
-			int numStates = DFA11_transitionS.Length;
-			DFA11_transition = new short[numStates][];
+			int numStates = DFA16_transitionS.Length;
+			DFA16_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA11_transition[i] = DFA.UnpackEncodedString(DFA11_transitionS[i]);
+				DFA16_transition[i] = DFA.UnpackEncodedString(DFA16_transitionS[i]);
 			}
 		}
 
-		public DFA11( BaseRecognizer recognizer )
+		public DFA16( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 11;
-			this.eot = DFA11_eot;
-			this.eof = DFA11_eof;
-			this.min = DFA11_min;
-			this.max = DFA11_max;
-			this.accept = DFA11_accept;
-			this.special = DFA11_special;
-			this.transition = DFA11_transition;
+			this.decisionNumber = 16;
+			this.eot = DFA16_eot;
+			this.eof = DFA16_eof;
+			this.min = DFA16_min;
+			this.max = DFA16_max;
+			this.accept = DFA16_accept;
+			this.special = DFA16_special;
+			this.transition = DFA16_transition;
 		}
 
 		public override string Description { get { return "1:1: Tokens : ( T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | EXPLICIT | IF | USING | CONST | INTERFACE | NAMESPACE | EXTERN | ID | Modifier | INT | STRING | COMMENT | WS | ANNOTATION );"; } }

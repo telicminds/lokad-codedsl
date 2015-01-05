@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 MessageContracts.g 2013-05-09 14:17:23
+// $ANTLR 3.4.1.9004 c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g 2014-12-16 21:56:31
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -117,7 +117,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	}
 
 	public override string[] TokenNames { get { return MessageContractsParser.tokenNames; } }
-	public override string GrammarFileName { get { return "MessageContracts.g"; } }
+	public override string GrammarFileName { get { return "c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g"; } }
 
 
 	[Conditional("ANTLR_TRACE")]
@@ -134,7 +134,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_program() {}
 	// $ANTLR start "program"
-	// MessageContracts.g:33:1: program : ( declaration )+ ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:33:1: program : ( declaration )+ ;
 	[GrammarRule("program")]
 	private AstParserRuleReturnScope<object, IToken> program()
 	{
@@ -153,14 +153,14 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(33, 1);
 		try
 		{
-			// MessageContracts.g:34:2: ( ( declaration )+ )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:34:2: ( ( declaration )+ )
 			DebugEnterAlt(1);
-			// MessageContracts.g:34:4: ( declaration )+
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:34:4: ( declaration )+
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(34, 4);
-			// MessageContracts.g:34:4: ( declaration )+
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:34:4: ( declaration )+
 			int cnt1=0;
 			try { DebugEnterSubRule(1);
 			while (true)
@@ -180,7 +180,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// MessageContracts.g:34:4: declaration
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:34:4: declaration
 					{
 					DebugLocation(34, 4);
 					PushFollow(Follow._declaration_in_program125);
@@ -242,7 +242,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_declaration() {}
 	// $ANTLR start "declaration"
-	// MessageContracts.g:37:1: declaration : ( modifier_declaration | frag_declaration | type_declaration | entity_declaration | namespace_declaration | extern_declaration | using_declaration );
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:37:1: declaration : ( modifier_declaration | frag_declaration | type_declaration | entity_declaration | namespace_declaration | extern_declaration | using_declaration );
 	[GrammarRule("declaration")]
 	private AstParserRuleReturnScope<object, IToken> declaration()
 	{
@@ -267,7 +267,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(37, 1);
 		try
 		{
-			// MessageContracts.g:38:2: ( modifier_declaration | frag_declaration | type_declaration | entity_declaration | namespace_declaration | extern_declaration | using_declaration )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:38:2: ( modifier_declaration | frag_declaration | type_declaration | entity_declaration | namespace_declaration | extern_declaration | using_declaration )
 			int alt2=7;
 			try { DebugEnterDecision(2, decisionCanBacktrack[2]);
 			switch (input.LA(1))
@@ -320,7 +320,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// MessageContracts.g:38:4: modifier_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:38:4: modifier_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -335,7 +335,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// MessageContracts.g:39:4: frag_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:39:4: frag_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -350,7 +350,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// MessageContracts.g:40:4: type_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:40:4: type_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -365,7 +365,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// MessageContracts.g:41:4: entity_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:41:4: entity_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -380,7 +380,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// MessageContracts.g:42:4: namespace_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:42:4: namespace_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -395,7 +395,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// MessageContracts.g:43:4: extern_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:43:4: extern_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -410,7 +410,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// MessageContracts.g:44:4: using_declaration
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:44:4: using_declaration
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -457,7 +457,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_namespace_declaration() {}
 	// $ANTLR start "namespace_declaration"
-	// MessageContracts.g:47:1: namespace_declaration : NAMESPACE ( ID ( '.' ID )* ) ';' -> ^( NamespaceToken ( ID )* ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:47:1: namespace_declaration : NAMESPACE ( ID ( '.' ID )* ) ';' -> ^( NamespaceToken ( ID )* ) ;
 	[GrammarRule("namespace_declaration")]
 	private AstParserRuleReturnScope<object, IToken> namespace_declaration()
 	{
@@ -489,25 +489,25 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(47, 28);
 		try
 		{
-			// MessageContracts.g:48:5: ( NAMESPACE ( ID ( '.' ID )* ) ';' -> ^( NamespaceToken ( ID )* ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:48:5: ( NAMESPACE ( ID ( '.' ID )* ) ';' -> ^( NamespaceToken ( ID )* ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:48:7: NAMESPACE ( ID ( '.' ID )* ) ';'
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:48:7: NAMESPACE ( ID ( '.' ID )* ) ';'
 			{
 			DebugLocation(48, 7);
 			NAMESPACE9=(IToken)Match(input,NAMESPACE,Follow._NAMESPACE_in_namespace_declaration183);  
 			stream_NAMESPACE.Add(NAMESPACE9);
 
 			DebugLocation(48, 17);
-			// MessageContracts.g:48:17: ( ID ( '.' ID )* )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:48:17: ( ID ( '.' ID )* )
 			DebugEnterAlt(1);
-			// MessageContracts.g:48:18: ID ( '.' ID )*
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:48:18: ID ( '.' ID )*
 			{
 			DebugLocation(48, 18);
 			ID10=(IToken)Match(input,ID,Follow._ID_in_namespace_declaration186);  
 			stream_ID.Add(ID10);
 
 			DebugLocation(48, 21);
-			// MessageContracts.g:48:21: ( '.' ID )*
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:48:21: ( '.' ID )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -526,7 +526,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// MessageContracts.g:48:22: '.' ID
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:48:22: '.' ID
 					{
 					DebugLocation(48, 22);
 					char_literal11=(IToken)Match(input,42,Follow._42_in_namespace_declaration189);  
@@ -574,14 +574,14 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 49:5: -> ^( NamespaceToken ( ID )* )
 			{
 				DebugLocation(49, 8);
-				// MessageContracts.g:49:8: ^( NamespaceToken ( ID )* )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:49:8: ^( NamespaceToken ( ID )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(49, 10);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(NamespaceToken, "NamespaceToken"), root_1);
 
 				DebugLocation(49, 25);
-				// MessageContracts.g:49:25: ( ID )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:49:25: ( ID )*
 				while ( stream_ID.HasNext )
 				{
 					DebugLocation(49, 25);
@@ -632,7 +632,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_using_declaration() {}
 	// $ANTLR start "using_declaration"
-	// MessageContracts.g:51:1: using_declaration : USING ( ID ( '.' ID )* ) ';' -> ^( UsingToken ( ID )* ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:51:1: using_declaration : USING ( ID ( '.' ID )* ) ';' -> ^( UsingToken ( ID )* ) ;
 	[GrammarRule("using_declaration")]
 	private AstParserRuleReturnScope<object, IToken> using_declaration()
 	{
@@ -664,25 +664,25 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(51, 24);
 		try
 		{
-			// MessageContracts.g:52:5: ( USING ( ID ( '.' ID )* ) ';' -> ^( UsingToken ( ID )* ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:52:5: ( USING ( ID ( '.' ID )* ) ';' -> ^( UsingToken ( ID )* ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:52:7: USING ( ID ( '.' ID )* ) ';'
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:52:7: USING ( ID ( '.' ID )* ) ';'
 			{
 			DebugLocation(52, 7);
 			USING14=(IToken)Match(input,USING,Follow._USING_in_using_declaration226);  
 			stream_USING.Add(USING14);
 
 			DebugLocation(52, 13);
-			// MessageContracts.g:52:13: ( ID ( '.' ID )* )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:52:13: ( ID ( '.' ID )* )
 			DebugEnterAlt(1);
-			// MessageContracts.g:52:14: ID ( '.' ID )*
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:52:14: ID ( '.' ID )*
 			{
 			DebugLocation(52, 14);
 			ID15=(IToken)Match(input,ID,Follow._ID_in_using_declaration229);  
 			stream_ID.Add(ID15);
 
 			DebugLocation(52, 17);
-			// MessageContracts.g:52:17: ( '.' ID )*
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:52:17: ( '.' ID )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
@@ -701,7 +701,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// MessageContracts.g:52:18: '.' ID
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:52:18: '.' ID
 					{
 					DebugLocation(52, 18);
 					char_literal16=(IToken)Match(input,42,Follow._42_in_using_declaration232);  
@@ -749,14 +749,14 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 53:5: -> ^( UsingToken ( ID )* )
 			{
 				DebugLocation(53, 8);
-				// MessageContracts.g:53:8: ^( UsingToken ( ID )* )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:53:8: ^( UsingToken ( ID )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(53, 10);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(UsingToken, "UsingToken"), root_1);
 
 				DebugLocation(53, 21);
-				// MessageContracts.g:53:21: ( ID )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:53:21: ( ID )*
 				while ( stream_ID.HasNext )
 				{
 					DebugLocation(53, 21);
@@ -807,7 +807,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_frag_declaration() {}
 	// $ANTLR start "frag_declaration"
-	// MessageContracts.g:56:1: frag_declaration : CONST ID '=' ID ID ';' -> ^( FragmentEntry ID ID ID ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:56:1: frag_declaration : CONST ID '=' ID ID ';' -> ^( FragmentEntry ID ID ID ) ;
 	[GrammarRule("frag_declaration")]
 	private AstParserRuleReturnScope<object, IToken> frag_declaration()
 	{
@@ -841,9 +841,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(56, 54);
 		try
 		{
-			// MessageContracts.g:57:2: ( CONST ID '=' ID ID ';' -> ^( FragmentEntry ID ID ID ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:57:2: ( CONST ID '=' ID ID ';' -> ^( FragmentEntry ID ID ID ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:57:4: CONST ID '=' ID ID ';'
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:57:4: CONST ID '=' ID ID ';'
 			{
 			DebugLocation(57, 4);
 			CONST19=(IToken)Match(input,CONST,Follow._CONST_in_frag_declaration263);  
@@ -886,7 +886,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 57:27: -> ^( FragmentEntry ID ID ID )
 			{
 				DebugLocation(57, 30);
-				// MessageContracts.g:57:30: ^( FragmentEntry ID ID ID )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:57:30: ^( FragmentEntry ID ID ID )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(57, 32);
@@ -941,7 +941,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_modifier_declaration() {}
 	// $ANTLR start "modifier_declaration"
-	// MessageContracts.g:59:1: modifier_declaration : IF Modifier '=' ID ( ',' ID )* ';' -> ^( ModifierDefinition Modifier ( ID )* ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:59:1: modifier_declaration : IF Modifier '=' ID ( ',' ID )* ';' -> ^( ModifierDefinition Modifier ( ID )* ) ;
 	[GrammarRule("modifier_declaration")]
 	private AstParserRuleReturnScope<object, IToken> modifier_declaration()
 	{
@@ -979,9 +979,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(59, 73);
 		try
 		{
-			// MessageContracts.g:60:2: ( IF Modifier '=' ID ( ',' ID )* ';' -> ^( ModifierDefinition Modifier ( ID )* ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:60:2: ( IF Modifier '=' ID ( ',' ID )* ';' -> ^( ModifierDefinition Modifier ( ID )* ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:60:4: IF Modifier '=' ID ( ',' ID )* ';'
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:60:4: IF Modifier '=' ID ( ',' ID )* ';'
 			{
 			DebugLocation(60, 4);
 			IF25=(IToken)Match(input,IF,Follow._IF_in_modifier_declaration300);  
@@ -1000,7 +1000,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			stream_ID.Add(ID28);
 
 			DebugLocation(60, 23);
-			// MessageContracts.g:60:23: ( ',' ID )*
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:60:23: ( ',' ID )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -1019,7 +1019,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// MessageContracts.g:60:24: ',' ID
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:60:24: ',' ID
 					{
 					DebugLocation(60, 24);
 					char_literal29=(IToken)Match(input,41,Follow._41_in_modifier_declaration309);  
@@ -1064,7 +1064,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 60:37: -> ^( ModifierDefinition Modifier ( ID )* )
 			{
 				DebugLocation(60, 40);
-				// MessageContracts.g:60:40: ^( ModifierDefinition Modifier ( ID )* )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:60:40: ^( ModifierDefinition Modifier ( ID )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(60, 42);
@@ -1073,7 +1073,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				DebugLocation(60, 61);
 				adaptor.AddChild(root_1, stream_Modifier.NextNode());
 				DebugLocation(60, 70);
-				// MessageContracts.g:60:70: ( ID )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:60:70: ( ID )*
 				while ( stream_ID.HasNext )
 				{
 					DebugLocation(60, 70);
@@ -1124,7 +1124,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_entity_declaration() {}
 	// $ANTLR start "entity_declaration"
-	// MessageContracts.g:62:1: entity_declaration : lc= INTERFACE ID block '{' ( declaration )* '}' -> ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:62:1: entity_declaration : lc= INTERFACE ID block '{' ( declaration )* '}' -> ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* ) ;
 	[GrammarRule("entity_declaration")]
 	private AstParserRuleReturnScope<object, IToken> entity_declaration()
 	{
@@ -1157,9 +1157,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(62, 58);
 		try
 		{
-			// MessageContracts.g:63:2: (lc= INTERFACE ID block '{' ( declaration )* '}' -> ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:63:2: (lc= INTERFACE ID block '{' ( declaration )* '}' -> ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:63:4: lc= INTERFACE ID block '{' ( declaration )* '}'
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:63:4: lc= INTERFACE ID block '{' ( declaration )* '}'
 			{
 			DebugLocation(63, 6);
 			lc=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_entity_declaration339);  
@@ -1180,7 +1180,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			stream_45.Add(char_literal34);
 
 			DebugLocation(63, 31);
-			// MessageContracts.g:63:31: ( declaration )*
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:63:31: ( declaration )*
 			try { DebugEnterSubRule(6);
 			while (true)
 			{
@@ -1199,7 +1199,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// MessageContracts.g:63:31: declaration
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:63:31: declaration
 					{
 					DebugLocation(63, 31);
 					PushFollow(Follow._declaration_in_entity_declaration347);
@@ -1242,7 +1242,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 64:2: -> ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* )
 			{
 				DebugLocation(64, 5);
-				// MessageContracts.g:64:5: ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:64:5: ^( EntityDefinition[$lc,\"Block\"] ID block ( declaration )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(64, 7);
@@ -1253,7 +1253,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				DebugLocation(64, 40);
 				adaptor.AddChild(root_1, stream_block.NextTree());
 				DebugLocation(64, 46);
-				// MessageContracts.g:64:46: ( declaration )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:64:46: ( declaration )*
 				while ( stream_declaration.HasNext )
 				{
 					DebugLocation(64, 46);
@@ -1304,7 +1304,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_type_declaration() {}
 	// $ANTLR start "type_declaration"
-	// MessageContracts.g:66:1: type_declaration : ID ( Modifier )? block -> ^( TypeToken ID block ( Modifier )? ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:66:1: type_declaration : ID ( Modifier )? block -> ^( TypeToken ID block ( Modifier )? ) ;
 	[GrammarRule("type_declaration")]
 	private AstParserRuleReturnScope<object, IToken> type_declaration()
 	{
@@ -1329,16 +1329,16 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(66, 56);
 		try
 		{
-			// MessageContracts.g:67:2: ( ID ( Modifier )? block -> ^( TypeToken ID block ( Modifier )? ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:67:2: ( ID ( Modifier )? block -> ^( TypeToken ID block ( Modifier )? ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:67:4: ID ( Modifier )? block
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:67:4: ID ( Modifier )? block
 			{
 			DebugLocation(67, 4);
 			ID37=(IToken)Match(input,ID,Follow._ID_in_type_declaration376);  
 			stream_ID.Add(ID37);
 
 			DebugLocation(67, 7);
-			// MessageContracts.g:67:7: ( Modifier )?
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:67:7: ( Modifier )?
 			int alt7=2;
 			try { DebugEnterSubRule(7);
 			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
@@ -1353,7 +1353,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// MessageContracts.g:67:7: Modifier
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:67:7: Modifier
 				{
 				DebugLocation(67, 7);
 				Modifier38=(IToken)Match(input,Modifier,Follow._Modifier_in_type_declaration378);  
@@ -1389,7 +1389,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 67:23: -> ^( TypeToken ID block ( Modifier )? )
 			{
 				DebugLocation(67, 26);
-				// MessageContracts.g:67:26: ^( TypeToken ID block ( Modifier )? )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:67:26: ^( TypeToken ID block ( Modifier )? )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(67, 28);
@@ -1400,7 +1400,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				DebugLocation(67, 41);
 				adaptor.AddChild(root_1, stream_block.NextTree());
 				DebugLocation(67, 47);
-				// MessageContracts.g:67:47: ( Modifier )?
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:67:47: ( Modifier )?
 				if (stream_Modifier.HasNext)
 				{
 					DebugLocation(67, 47);
@@ -1451,7 +1451,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_member() {}
 	// $ANTLR start "member"
-	// MessageContracts.g:69:1: member : ( ANNOTATION ID ID -> ^( MemberAnnToken ANNOTATION ID ID ) | ID ID -> ^( MemberToken ID ID ) | ID -> ^( FragmentReference ID ) );
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:69:1: member : ( ANNOTATION ID ID -> ^( MemberAnnToken ANNOTATION ID ID ) | ID ID -> ^( MemberToken ID ID ) | ID -> ^( FragmentReference ID ) );
 	[GrammarRule("member")]
 	private AstParserRuleReturnScope<object, IToken> member()
 	{
@@ -1483,7 +1483,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(69, 1);
 		try
 		{
-			// MessageContracts.g:70:2: ( ANNOTATION ID ID -> ^( MemberAnnToken ANNOTATION ID ID ) | ID ID -> ^( MemberToken ID ID ) | ID -> ^( FragmentReference ID ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:70:2: ( ANNOTATION ID ID -> ^( MemberAnnToken ANNOTATION ID ID ) | ID ID -> ^( MemberToken ID ID ) | ID -> ^( FragmentReference ID ) )
 			int alt8=3;
 			try { DebugEnterDecision(8, decisionCanBacktrack[8]);
 			int LA8_1 = input.LA(1);
@@ -1522,7 +1522,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// MessageContracts.g:70:4: ANNOTATION ID ID
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:70:4: ANNOTATION ID ID
 				{
 				DebugLocation(70, 4);
 				ANNOTATION40=(IToken)Match(input,ANNOTATION,Follow._ANNOTATION_in_member406);  
@@ -1553,7 +1553,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				// 70:21: -> ^( MemberAnnToken ANNOTATION ID ID )
 				{
 					DebugLocation(70, 24);
-					// MessageContracts.g:70:24: ^( MemberAnnToken ANNOTATION ID ID )
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:70:24: ^( MemberAnnToken ANNOTATION ID ID )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(70, 26);
@@ -1578,7 +1578,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// MessageContracts.g:71:4: ID ID
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:71:4: ID ID
 				{
 				DebugLocation(71, 4);
 				ID43=(IToken)Match(input,ID,Follow._ID_in_member428);  
@@ -1605,7 +1605,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				// 71:10: -> ^( MemberToken ID ID )
 				{
 					DebugLocation(71, 13);
-					// MessageContracts.g:71:13: ^( MemberToken ID ID )
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:71:13: ^( MemberToken ID ID )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(71, 15);
@@ -1628,7 +1628,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// MessageContracts.g:72:4: ID
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:72:4: ID
 				{
 				DebugLocation(72, 4);
 				ID45=(IToken)Match(input,ID,Follow._ID_in_member445);  
@@ -1651,7 +1651,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				// 72:7: -> ^( FragmentReference ID )
 				{
 					DebugLocation(72, 10);
-					// MessageContracts.g:72:10: ^( FragmentReference ID )
+					// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:72:10: ^( FragmentReference ID )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(72, 12);
@@ -1704,7 +1704,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_block() {}
 	// $ANTLR start "block"
-	// MessageContracts.g:76:1: block : lc= '(' ( member ( ',' member )* )? ')' ( representation )? -> ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:76:1: block : lc= '(' ( member ( ',' member )* )? ')' ( representation )? -> ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? ) ;
 	[GrammarRule("block")]
 	private AstParserRuleReturnScope<object, IToken> block()
 	{
@@ -1735,16 +1735,16 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(76, 4);
 		try
 		{
-			// MessageContracts.g:77:5: (lc= '(' ( member ( ',' member )* )? ')' ( representation )? -> ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:77:5: (lc= '(' ( member ( ',' member )* )? ')' ( representation )? -> ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:77:9: lc= '(' ( member ( ',' member )* )? ')' ( representation )?
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:77:9: lc= '(' ( member ( ',' member )* )? ')' ( representation )?
 			{
 			DebugLocation(77, 11);
 			lc=(IToken)Match(input,39,Follow._39_in_block475);  
 			stream_39.Add(lc);
 
 			DebugLocation(78, 13);
-			// MessageContracts.g:78:13: ( member ( ',' member )* )?
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:78:13: ( member ( ',' member )* )?
 			int alt10=2;
 			try { DebugEnterSubRule(10);
 			try { DebugEnterDecision(10, decisionCanBacktrack[10]);
@@ -1759,7 +1759,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// MessageContracts.g:78:14: member ( ',' member )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:78:14: member ( ',' member )*
 				{
 				DebugLocation(78, 14);
 				PushFollow(Follow._member_in_block490);
@@ -1768,7 +1768,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 
 				stream_member.Add(member46.Tree);
 				DebugLocation(78, 21);
-				// MessageContracts.g:78:21: ( ',' member )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:78:21: ( ',' member )*
 				try { DebugEnterSubRule(9);
 				while (true)
 				{
@@ -1787,7 +1787,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// MessageContracts.g:78:22: ',' member
+						// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:78:22: ',' member
 						{
 						DebugLocation(78, 22);
 						char_literal47=(IToken)Match(input,41,Follow._41_in_block493);  
@@ -1825,7 +1825,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			stream_40.Add(char_literal49);
 
 			DebugLocation(79, 13);
-			// MessageContracts.g:79:13: ( representation )?
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:79:13: ( representation )?
 			int alt11=2;
 			try { DebugEnterSubRule(11);
 			try { DebugEnterDecision(11, decisionCanBacktrack[11]);
@@ -1840,7 +1840,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// MessageContracts.g:79:13: representation
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:79:13: representation
 				{
 				DebugLocation(79, 13);
 				PushFollow(Follow._representation_in_block511);
@@ -1872,14 +1872,14 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 80:9: -> ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? )
 			{
 				DebugLocation(80, 12);
-				// MessageContracts.g:80:12: ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:80:12: ^( BlockToken[$lc,\"Block\"] ( member )* ( representation )? )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(80, 14);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(BlockToken, lc, "Block"), root_1);
 
 				DebugLocation(80, 38);
-				// MessageContracts.g:80:38: ( member )*
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:80:38: ( member )*
 				while ( stream_member.HasNext )
 				{
 					DebugLocation(80, 38);
@@ -1888,7 +1888,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 				}
 				stream_member.Reset();
 				DebugLocation(80, 46);
-				// MessageContracts.g:80:46: ( representation )?
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:80:46: ( representation )?
 				if (stream_representation.HasNext)
 				{
 					DebugLocation(80, 46);
@@ -1939,7 +1939,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_representation() {}
 	// $ANTLR start "representation"
-	// MessageContracts.g:83:1: representation : EXPLICIT STRING -> ^( StringRepresentationToken STRING ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:83:1: representation : EXPLICIT STRING -> ^( StringRepresentationToken STRING ) ;
 	[GrammarRule("representation")]
 	private AstParserRuleReturnScope<object, IToken> representation()
 	{
@@ -1963,9 +1963,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(83, 57);
 		try
 		{
-			// MessageContracts.g:84:2: ( EXPLICIT STRING -> ^( StringRepresentationToken STRING ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:84:2: ( EXPLICIT STRING -> ^( StringRepresentationToken STRING ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:84:4: EXPLICIT STRING
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:84:4: EXPLICIT STRING
 			{
 			DebugLocation(84, 4);
 			EXPLICIT51=(IToken)Match(input,EXPLICIT,Follow._EXPLICIT_in_representation555);  
@@ -1992,7 +1992,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 84:20: -> ^( StringRepresentationToken STRING )
 			{
 				DebugLocation(84, 23);
-				// MessageContracts.g:84:23: ^( StringRepresentationToken STRING )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:84:23: ^( StringRepresentationToken STRING )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(84, 25);
@@ -2043,7 +2043,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_extern_declaration() {}
 	// $ANTLR start "extern_declaration"
-	// MessageContracts.g:86:1: extern_declaration : EXTERN STRING ';' -> ^( ExternToken STRING ) ;
+	// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:86:1: extern_declaration : EXTERN STRING ';' -> ^( ExternToken STRING ) ;
 	[GrammarRule("extern_declaration")]
 	private AstParserRuleReturnScope<object, IToken> extern_declaration()
 	{
@@ -2070,9 +2070,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 		DebugLocation(86, 50);
 		try
 		{
-			// MessageContracts.g:87:5: ( EXTERN STRING ';' -> ^( ExternToken STRING ) )
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:87:5: ( EXTERN STRING ';' -> ^( ExternToken STRING ) )
 			DebugEnterAlt(1);
-			// MessageContracts.g:87:9: EXTERN STRING ';'
+			// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:87:9: EXTERN STRING ';'
 			{
 			DebugLocation(87, 9);
 			EXTERN53=(IToken)Match(input,EXTERN,Follow._EXTERN_in_extern_declaration580);  
@@ -2103,7 +2103,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 			// 87:27: -> ^( ExternToken STRING )
 			{
 				DebugLocation(87, 30);
-				// MessageContracts.g:87:30: ^( ExternToken STRING )
+				// c:\\Source\\lokad-codedsl\\Source\\MessageContracts.g:87:30: ^( ExternToken STRING )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(87, 32);
