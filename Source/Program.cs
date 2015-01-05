@@ -225,9 +225,9 @@ namespace Lokad.CodeDsl
                     TemplateForInterfaceName = "public interface I{0}Aggregate",
                     TemplateForInterfaceMember = "void When({0} c);",
                     ClassNameTemplate = @"[DataContract(Namespace = {1})]{2}
-public partial class {0}",
+	public partial class {0}",
                     MemberTemplate = @"{0}[DataMember(Order = {1}{4})]
-public {2} {3} {{ get; set; }}",
+		public virtual {2} {3} {{ get; set; }}",
                 };
 
   
