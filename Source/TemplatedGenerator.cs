@@ -327,7 +327,7 @@ public sealed class {0}";
                     : string.Format("{0}{1}", member.Annotation, Environment.NewLine);
 
                 var isRequired = string.Empty;
-                if (annotation.IndexOf("required", StringComparison.InvariantCultureIgnoreCase) > 0)
+				if (annotation.IndexOf("required", StringComparison.InvariantCultureIgnoreCase) > 0 && annotation.IndexOf("RequiredIfNull", StringComparison.InvariantCultureIgnoreCase) < 0)
                 {
                     isRequired = ", IsRequired=true";
                 }
