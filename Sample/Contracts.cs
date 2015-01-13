@@ -60,14 +60,14 @@ namespace Lokad
 		}
 
 		public static UniverseId New()
-        		{
-        			return new UniverseId(Guid.NewGuid());
-        		}
+		{
+			return new UniverseId(Guid.NewGuid());
+		}
         
-        		public static UniverseId Empty()
-        		{
-        			return new UniverseId(Guid.Empty);
-        		}
+		public static UniverseId Empty()
+		{
+			return new UniverseId(Guid.Empty);
+		}
     }
     [DataContract(Namespace = "Lokad")]
 	public partial class GalaxyId : IIdentity
@@ -122,14 +122,14 @@ namespace Lokad
 		}
 
 		public static GalaxyId New()
-        		{
-        			return new GalaxyId(Guid.NewGuid());
-        		}
+		{
+			return new GalaxyId(Guid.NewGuid());
+		}
         
-        		public static GalaxyId Empty()
-        		{
-        			return new GalaxyId(Guid.Empty);
-        		}
+		public static GalaxyId Empty()
+		{
+			return new GalaxyId(Guid.Empty);
+		}
     }
     [DataContract(Namespace = "Lokad")]
 	public partial class Universe
@@ -166,8 +166,14 @@ namespace Lokad
             return string.Format(@"Create universe - {0}", Name);
         }
     }
+    public interface IUniverseCreated : IUniverseEvent<UniverseId>
+    {
+        UniverseId Id { get; set; }
+        string Name { get; set; }
+        
+    }
     [DataContract(Namespace = "Lokad")]
-	public partial class UniverseCreated : DomainEvent, IUniverseEvent<UniverseId>
+	public partial class UniverseCreated : DomainEvent, IUniverseCreated
     {
         [DataMember(Order = 1)]
 		public virtual UniverseId Id { get; set; }
@@ -206,8 +212,14 @@ namespace Lokad
             return string.Format(@"Destroy universe, reason - {0}", Reason);
         }
     }
+    public interface IUniverseDestroyed : IUniverseEvent<UniverseId>
+    {
+        UniverseId Id { get; set; }
+        string Reason { get; set; }
+        
+    }
     [DataContract(Namespace = "Lokad")]
-	public partial class UniverseDestroyed : DomainEvent, IUniverseEvent<UniverseId>
+	public partial class UniverseDestroyed : DomainEvent, IUniverseDestroyed
     {
         [DataMember(Order = 1)]
 		public virtual UniverseId Id { get; set; }
@@ -249,8 +261,17 @@ namespace Lokad
             return string.Format(@"Create {1} galaxy - {0}", Name, Type);
         }
     }
+    public interface IGalaxyAdded : IUniverseEvent<UniverseId>
+    {
+        UniverseId Id { get; set; }
+        GalaxyId GalaxyId { get; set; }
+        string Name { get; set; }
+        GalaxyType Type { get; set; }
+        DateTime DateUtc { get; set; }
+        
+    }
     [DataContract(Namespace = "Lokad")]
-	public partial class GalaxyAdded : DomainEvent, IUniverseEvent<UniverseId>
+	public partial class GalaxyAdded : DomainEvent, IGalaxyAdded
     {
         [DataMember(Order = 1)]
 		public virtual UniverseId Id { get; set; }
@@ -301,8 +322,17 @@ namespace Lokad
             return string.Format(@"Wipe galaxy {0}, reason - {1}", GalaxyId, Reason);
         }
     }
+    public interface IGalaxyWiped : IUniverseEvent<UniverseId>
+    {
+        UniverseId Id { get; set; }
+        GalaxyId GalaxyId { get; set; }
+        string Name { get; set; }
+        string Reason { get; set; }
+        DateTime DateUtc { get; set; }
+        
+    }
     [DataContract(Namespace = "Lokad")]
-	public partial class GalaxyWiped : DomainEvent, IUniverseEvent<UniverseId>
+	public partial class GalaxyWiped : DomainEvent, IGalaxyWiped
     {
         [DataMember(Order = 1)]
 		public virtual UniverseId Id { get; set; }
