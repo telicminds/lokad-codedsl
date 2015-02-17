@@ -135,7 +135,11 @@ public sealed class {0}";
                     {
                         writer.Write("public {0} (TenancyId tenancyId, int aggregateVersion, ", contract.Name);
                     }
-                    else
+                    else if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "?" && c.Interface != "IIdentity") != null)
+                    {
+						writer.Write("public {0} (int? version, ", contract.Name);
+                    }
+					else
                     {
                         writer.Write("public {0} (", contract.Name);
                     }
@@ -353,7 +357,12 @@ public sealed class {0}";
         void WriteMembers(Message message, CodeWriter writer)
         {
             var idx = 1;
-            foreach (var member in message.Members)
+			if (message.Modifiers.Any(c => c.Identifier == "?" && c.Interface != "IIdentity"))
+			{
+				writer.WriteLine(MemberTemplate, string.Empty, idx, "int?", GeneratorUtil.MemberCase("Version"), string.Empty);
+				idx++;
+			}
+			foreach (var member in message.Members)
             {
                 var annotation = string.IsNullOrWhiteSpace(member.Annotation)
                     ? string.Empty
@@ -388,6 +397,10 @@ public sealed class {0}";
 
         void WriteAssignments(Message message, CodeWriter writer)
         {
+	        if(message.Modifiers.Any(c => c.Identifier == "?" && c.Interface != "IIdentity"))
+	        {
+				writer.WriteLine("{0} = {1};", GeneratorUtil.MemberCase("Version"), GeneratorUtil.ParameterCase("version"));
+	        }
             foreach (var member in message.Members)
             {
                 writer.WriteLine("{0} = {1};", GeneratorUtil.MemberCase(member.Name), GeneratorUtil.ParameterCase(member.Name));

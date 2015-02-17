@@ -150,13 +150,16 @@ namespace Lokad
 	public partial class CreateUniverse : IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual UniverseId Id { get; set; }
+		public virtual int? Version { get; set; }
         [DataMember(Order = 2)]
+		public virtual UniverseId Id { get; set; }
+        [DataMember(Order = 3)]
 		public virtual string Name { get; set; }
         
         public CreateUniverse () {}
-        public CreateUniverse (UniverseId id, string name)
+        public CreateUniverse (int? version, UniverseId id, string name)
         {
+            Version = version;
             Id = id;
             Name = name;
         }
@@ -168,8 +171,8 @@ namespace Lokad
     }
     public interface IUniverseCreated : IUniverseEvent<UniverseId>
     {
-        UniverseId Id { get; set; }
-        string Name { get; set; }
+        UniverseId Id { get; }
+        string Name { get; }
         
     }
     [DataContract(Namespace = "Lokad")]
@@ -196,13 +199,16 @@ namespace Lokad
 	public partial class DestroyUniverse : IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual UniverseId Id { get; set; }
+		public virtual int? Version { get; set; }
         [DataMember(Order = 2)]
+		public virtual UniverseId Id { get; set; }
+        [DataMember(Order = 3)]
 		public virtual string Reason { get; set; }
         
         public DestroyUniverse () {}
-        public DestroyUniverse (UniverseId id, string reason)
+        public DestroyUniverse (int? version, UniverseId id, string reason)
         {
+            Version = version;
             Id = id;
             Reason = reason;
         }
@@ -214,8 +220,8 @@ namespace Lokad
     }
     public interface IUniverseDestroyed : IUniverseEvent<UniverseId>
     {
-        UniverseId Id { get; set; }
-        string Reason { get; set; }
+        UniverseId Id { get; }
+        string Reason { get; }
         
     }
     [DataContract(Namespace = "Lokad")]
@@ -242,15 +248,18 @@ namespace Lokad
 	public partial class AddGalaxy : IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual UniverseId Id { get; set; }
+		public virtual int? Version { get; set; }
         [DataMember(Order = 2)]
-		public virtual string Name { get; set; }
+		public virtual UniverseId Id { get; set; }
         [DataMember(Order = 3)]
+		public virtual string Name { get; set; }
+        [DataMember(Order = 4)]
 		public virtual GalaxyType Type { get; set; }
         
         public AddGalaxy () {}
-        public AddGalaxy (UniverseId id, string name, GalaxyType type)
+        public AddGalaxy (int? version, UniverseId id, string name, GalaxyType type)
         {
+            Version = version;
             Id = id;
             Name = name;
             Type = type;
@@ -263,11 +272,11 @@ namespace Lokad
     }
     public interface IGalaxyAdded : IUniverseEvent<UniverseId>
     {
-        UniverseId Id { get; set; }
-        GalaxyId GalaxyId { get; set; }
-        string Name { get; set; }
-        GalaxyType Type { get; set; }
-        DateTime DateUtc { get; set; }
+        UniverseId Id { get; }
+        GalaxyId GalaxyId { get; }
+        string Name { get; }
+        GalaxyType Type { get; }
+        DateTime DateUtc { get; }
         
     }
     [DataContract(Namespace = "Lokad")]
@@ -303,15 +312,18 @@ namespace Lokad
 	public partial class WipeGalaxy : IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual UniverseId Id { get; set; }
+		public virtual int? Version { get; set; }
         [DataMember(Order = 2)]
-		public virtual GalaxyId GalaxyId { get; set; }
+		public virtual UniverseId Id { get; set; }
         [DataMember(Order = 3)]
+		public virtual GalaxyId GalaxyId { get; set; }
+        [DataMember(Order = 4)]
 		public virtual string Reason { get; set; }
         
         public WipeGalaxy () {}
-        public WipeGalaxy (UniverseId id, GalaxyId galaxyId, string reason)
+        public WipeGalaxy (int? version, UniverseId id, GalaxyId galaxyId, string reason)
         {
+            Version = version;
             Id = id;
             GalaxyId = galaxyId;
             Reason = reason;
@@ -324,11 +336,11 @@ namespace Lokad
     }
     public interface IGalaxyWiped : IUniverseEvent<UniverseId>
     {
-        UniverseId Id { get; set; }
-        GalaxyId GalaxyId { get; set; }
-        string Name { get; set; }
-        string Reason { get; set; }
-        DateTime DateUtc { get; set; }
+        UniverseId Id { get; }
+        GalaxyId GalaxyId { get; }
+        string Name { get; }
+        string Reason { get; }
+        DateTime DateUtc { get; }
         
     }
     [DataContract(Namespace = "Lokad")]

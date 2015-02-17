@@ -24,7 +24,7 @@ interface Universe(UniverseId Id)
     // define shortcut for events
     if ! = IUniverseEvent<UniverseId>
 
-    CreateUniverse?(name)
+    CreateUniverse??(name)
         // override ToString() for command
         explicit "Create universe - {name}"
         UniverseCreated!(name)
