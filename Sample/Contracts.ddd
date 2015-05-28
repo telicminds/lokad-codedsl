@@ -20,7 +20,7 @@ const dateUtc = DateTime dateUtc
 interface Universe(UniverseId Id)
 {
     // define shortcut for commands
-    if ? = IUniverseCommand
+    if ? = DomainCommand, IUniverseCommand
     // define shortcut for events
     if ! = IUniverseEvent<UniverseId>
 

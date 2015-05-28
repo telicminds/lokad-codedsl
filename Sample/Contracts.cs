@@ -147,19 +147,16 @@ namespace Lokad
         }
     }
     [DataContract(Namespace = "Lokad")]
-	public partial class CreateUniverse : IUniverseCommand
+	public partial class CreateUniverse : DomainCommand, IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual int? Version { get; set; }
-        [DataMember(Order = 2)]
 		public virtual UniverseId Id { get; set; }
-        [DataMember(Order = 3)]
+        [DataMember(Order = 2)]
 		public virtual string Name { get; set; }
         
         public CreateUniverse () {}
-        public CreateUniverse (int? version, UniverseId id, string name)
+        public CreateUniverse (TenancyId tenancyId, int aggregateVersion, UniverseId id, string name) : base(tenancyId, aggregateVersion)
         {
-            Version = version;
             Id = id;
             Name = name;
         }
@@ -196,19 +193,16 @@ namespace Lokad
         }
     }
     [DataContract(Namespace = "Lokad")]
-	public partial class DestroyUniverse : IUniverseCommand
+	public partial class DestroyUniverse : DomainCommand, IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual int? Version { get; set; }
-        [DataMember(Order = 2)]
 		public virtual UniverseId Id { get; set; }
-        [DataMember(Order = 3)]
+        [DataMember(Order = 2)]
 		public virtual string Reason { get; set; }
         
         public DestroyUniverse () {}
-        public DestroyUniverse (int? version, UniverseId id, string reason)
+        public DestroyUniverse (TenancyId tenancyId, int aggregateVersion, UniverseId id, string reason) : base(tenancyId, aggregateVersion)
         {
-            Version = version;
             Id = id;
             Reason = reason;
         }
@@ -245,21 +239,18 @@ namespace Lokad
         }
     }
     [DataContract(Namespace = "Lokad")]
-	public partial class AddGalaxy : IUniverseCommand
+	public partial class AddGalaxy : DomainCommand, IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual int? Version { get; set; }
-        [DataMember(Order = 2)]
 		public virtual UniverseId Id { get; set; }
-        [DataMember(Order = 3)]
+        [DataMember(Order = 2)]
 		public virtual string Name { get; set; }
-        [DataMember(Order = 4)]
+        [DataMember(Order = 3)]
 		public virtual GalaxyType Type { get; set; }
         
         public AddGalaxy () {}
-        public AddGalaxy (int? version, UniverseId id, string name, GalaxyType type)
+        public AddGalaxy (TenancyId tenancyId, int aggregateVersion, UniverseId id, string name, GalaxyType type) : base(tenancyId, aggregateVersion)
         {
-            Version = version;
             Id = id;
             Name = name;
             Type = type;
@@ -309,21 +300,18 @@ namespace Lokad
         }
     }
     [DataContract(Namespace = "Lokad")]
-	public partial class WipeGalaxy : IUniverseCommand
+	public partial class WipeGalaxy : DomainCommand, IUniverseCommand
     {
         [DataMember(Order = 1)]
-		public virtual int? Version { get; set; }
-        [DataMember(Order = 2)]
 		public virtual UniverseId Id { get; set; }
-        [DataMember(Order = 3)]
+        [DataMember(Order = 2)]
 		public virtual GalaxyId GalaxyId { get; set; }
-        [DataMember(Order = 4)]
+        [DataMember(Order = 3)]
 		public virtual string Reason { get; set; }
         
         public WipeGalaxy () {}
-        public WipeGalaxy (int? version, UniverseId id, GalaxyId galaxyId, string reason)
+        public WipeGalaxy (TenancyId tenancyId, int aggregateVersion, UniverseId id, GalaxyId galaxyId, string reason) : base(tenancyId, aggregateVersion)
         {
-            Version = version;
             Id = id;
             GalaxyId = galaxyId;
             Reason = reason;

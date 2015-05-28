@@ -114,7 +114,10 @@ public sealed class {0}";
 						//writer.Write(" : DomainEvent, {0}", string.Join(", ", contract.Modifiers.Select(s => s.Interface).ToArray()));
 						writer.Write(" : DomainEvent, {0}", string.Format("I{0}", contract.Name));
 					}
-
+					//else if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "?" && c.Interface != "IIdentity") != null)
+					//{
+					//	writer.Write(" : DomainCommand, {0}", string.Join(", ", contract.Modifiers.Select(s => s.Interface).ToArray()));
+					//}
                     else
                     {
                         writer.Write(" : {0}", string.Join(", ", contract.Modifiers.Select(s => s.Interface).ToArray()));
@@ -135,9 +138,9 @@ public sealed class {0}";
                     {
                         writer.Write("public {0} (TenancyId tenancyId, int aggregateVersion, ", contract.Name);
                     }
-                    else if (contract.Modifiers.FirstOrDefault(c => c.Identifier == "?" && c.Interface != "IIdentity") != null)
+					else if (contract.Modifiers.FirstOrDefault(c => c.Interface == "DomainCommand") != null)
                     {
-						writer.Write("public {0} (int? version, ", contract.Name);
+						writer.Write("public {0} (TenancyId tenancyId, int aggregateVersion, ", contract.Name);
                     }
 					else
                     {
@@ -148,11 +151,15 @@ public sealed class {0}";
                     {
                         writer.WriteLine(") : base(tenancyId, id, aggregateVersion)");
                     }
-                    else
-                    {
-                        writer.WriteLine(")");
-                    }
-                    writer.WriteLine("{");
+						else if (contract.Modifiers.FirstOrDefault(c => c.Interface == "DomainCommand") != null)
+						{
+							writer.WriteLine(") : base(tenancyId, aggregateVersion)");
+						}
+						else
+						{
+							writer.WriteLine(")");
+						}
+	                writer.WriteLine("{");
 
                     writer.Indent += 1;
                     WriteAssignments(contract, writer);
@@ -357,11 +364,6 @@ public sealed class {0}";
         void WriteMembers(Message message, CodeWriter writer)
         {
             var idx = 1;
-			if (message.Modifiers.Any(c => c.Identifier == "?" && c.Interface != "IIdentity"))
-			{
-				writer.WriteLine(MemberTemplate, string.Empty, idx, "int?", GeneratorUtil.MemberCase("Version"), string.Empty);
-				idx++;
-			}
 			foreach (var member in message.Members)
             {
                 var annotation = string.IsNullOrWhiteSpace(member.Annotation)
@@ -397,11 +399,7 @@ public sealed class {0}";
 
         void WriteAssignments(Message message, CodeWriter writer)
         {
-	        if(message.Modifiers.Any(c => c.Identifier == "?" && c.Interface != "IIdentity"))
-	        {
-				writer.WriteLine("{0} = {1};", GeneratorUtil.MemberCase("Version"), GeneratorUtil.ParameterCase("version"));
-	        }
-            foreach (var member in message.Members)
+	        foreach (var member in message.Members)
             {
                 writer.WriteLine("{0} = {1};", GeneratorUtil.MemberCase(member.Name), GeneratorUtil.ParameterCase(member.Name));
             }
