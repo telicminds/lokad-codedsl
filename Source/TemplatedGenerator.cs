@@ -32,7 +32,7 @@ public sealed class {0}";
             TemplateForInterfaceMember = "void When({0} c)";
 
 			InterfaceMemberTemplate = @"{0} {1} {{ get; }}";
-			TemplateForEventInterfaceName = "public interface I{0} : {1}";
+			TemplateForEventInterfaceName = "public partial interface I{0} : {1}";
 
             GenerateInterfaceForEntityWithModifiers = "none";
             //
